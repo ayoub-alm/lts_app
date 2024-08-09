@@ -1,0 +1,80 @@
+.slogen{
+    animation: slogen 6s ease-in-out infinite    ;
+    position: relative;
+    transition:  2s ease-in-out;
+}
+
+@keyframes slogen {
+    0%   {top: 0px;}
+    50%   {top: 60px;}
+    100%  {top: 0px;}
+}
+
+
+.card{
+    height: 12rem !important;
+    background-size: cover !important;
+    background-position: center !important;
+    color: white !important;
+}
+.card:hover .formation-card-name{
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.4);
+transition: 800ms ;
+animation: mu ease-in-out;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card:hover .formation-card-name {
+transform:scale(1.05) ;
+position: relative;
+z-index: 1000;
+border : 4px solid  rgb(255, 255, 255);
+color:   rgb(255, 255, 255) !important;
+border-radius: 10px;
+
+}
+
+.formation-card-name{
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 0px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(1px);
+/* -webkit-backdrop-filter: blur(1px); */
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.formation-card-name h2{
+text-shadow: 2px 2px 15px black;
+}
+
+.scroll-section{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,0.3) 0%, rgba(148,187,233,0.3) 100%);
+}
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.glass{
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.section-title{
+   text-decoration: rgb(229 77 76) wavy underline;
+   color: rgb(229 77 76) !important ;
+
+}
