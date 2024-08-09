@@ -74,7 +74,7 @@ backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .section-title{
-   text-decoration: rgb(229 77 76) wavy underline;
+   text-decoration: rgb(255, 255, 255) wavy underline;
    color: rgb(229 77 76) !important ;
 
 }
