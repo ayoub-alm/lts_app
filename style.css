@@ -11,12 +11,12 @@
 }
 
 
-.card{
+/* .card{
     height: 12rem !important;
     background-size: cover !important;
     background-position: center !important;
     color: white !important;
-}
+} */
 .card:hover .formation-card-name{
 /* From https://css.glass */
 background: rgba(255, 255, 255, 0.4);
