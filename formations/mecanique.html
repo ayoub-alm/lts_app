@@ -32,7 +32,7 @@
             <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
               Formations
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu glass-panel border-0" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="paramedical.html">Paramédical</a></li>
               <li><a class="dropdown-item" href="web-development.html">Développement Web</a></li>
               <li><a class="dropdown-item" href="langues.html">Langues</a></li>
@@ -56,7 +56,7 @@
   </header>
 
   <!-- Overview Section -->
-  <section class="py-5">
+  <section class="reveal py-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
@@ -75,7 +75,7 @@
   </section>
 
   <!-- Program Details -->
-  <section id="programme" class="py-5 bg-light">
+  <section class="reveal" id="programme" class="py-5 bg-light">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="section-title">Programme de la Formation</h2>
@@ -83,8 +83,8 @@
       </div>
       <div class="row g-4 justify-content-center">
         <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body text-center p-4">
+          <div class="formation-card h-100">
+            <div class="formation-card-body text-center p-4">
               <div class="mb-3 text-primary"><i class="bi bi-gear-wide-connected fs-1"></i></div>
               <h4 class="card-title fw-bold">Conception (CAO)</h4>
               <p class="card-text text-muted">Maîtrise de SolidWorks, AutoCAD et Catia pour la modélisation 3D.</p>
@@ -92,8 +92,8 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body text-center p-4">
+          <div class="formation-card h-100">
+            <div class="formation-card-body text-center p-4">
               <div class="mb-3 text-primary"><i class="bi bi-tools fs-1"></i></div>
               <h4 class="card-title fw-bold">Maintenance Industrielle</h4>
               <p class="card-text text-muted">Diagnostic de pannes, maintenance préventive et corrective.</p>
@@ -101,8 +101,8 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body text-center p-4">
+          <div class="formation-card h-100">
+            <div class="formation-card-body text-center p-4">
               <div class="mb-3 text-primary"><i class="bi bi-robot fs-1"></i></div>
               <h4 class="card-title fw-bold">Automatisme</h4>
               <p class="card-text text-muted">Programmation d'automates et pilotage de systèmes robotisés.</p>
@@ -114,7 +114,7 @@
   </section>
 
   <!-- Opportunities -->
-  <section class="py-5">
+  <section class="reveal py-5">
     <div class="container">
       <h2 class="section-title text-center mb-5">Débouchés Professionnels</h2>
       <div class="row text-center">
@@ -143,7 +143,7 @@
   </section>
 
   <!-- CTA -->
-  <section class="py-5 bg-primary text-white text-center">
+  <section class="reveal py-5 bg-primary text-white text-center">
     <div class="container">
       <h2 class="mb-4">Construisez votre carrière dans l'industrie</h2>
       <p class="lead mb-4">Des opportunités d'emploi concrètes à la clé.</p>
@@ -189,5 +189,27 @@
   </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Scroll Reveal Animation
+    window.addEventListener('scroll', reveal);
+
+    function reveal() {
+      var reveals = document.querySelectorAll('.reveal');
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if (revealtop < windowheight - revealpoint) {
+          reveals[i].classList.add('active');
+        } else {
+          reveals[i].classList.remove('active');
+        }
+      }
+    }
+  </script>
   </body>
+
 </html>
