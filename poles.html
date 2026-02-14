@@ -1,342 +1,195 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nos Pôles de Formation - LTS ACADEMY</title>
-    <link rel="shortcut icon" href="ltsAcademy.png" type="image/x-icon">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-      .pole-header {
-        background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-        color: white;
-        padding: 40px 20px;
-        border-radius: 20px;
-        margin-bottom: 30px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      }
-      .formation-list-item {
-        transition: all 0.3s ease;
-        border-left: 3px solid transparent;
-      }
-      .formation-list-item:hover {
-        background-color: rgba(77, 182, 172, 0.1);
-        padding-left: 10px;
-        border-left: 3px solid var(--color-secondary);
-      }
-      .pole-icon {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-        display: inline-block;
-        padding: 15px;
-        border-radius: 50%;
-        background: rgba(255,255,255,0.2);
-        backdrop-filter: blur(5px);
-      }
-    </style>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Pôles - LTS Academy</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="ltsAcademy.png" alt="LTS Academy" width="40" height="40" class="me-2">
-        <span>LTS ACADEMY</span>
+        <img src="assets/lts.png" alt="LTS Logo" width="40" height="40" class="me-2" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+        <span>LTS Academy</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-2">
           <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
           <li class="nav-item"><a class="nav-link" href="impact.html">Étude d’Impact</a></li>
           <li class="nav-item"><a class="nav-link active" href="poles.html">Nos Pôles</a></li>
-          <li class="nav-item"><a class="nav-link btn btn-primary-custom text-white ms-lg-3 px-4" href="index.html#contact">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Formations</a>
+            <ul class="dropdown-menu border-0 shadow-lg" style="border-radius: 12px;">
+              <li><a class="dropdown-item" href="formations/marketing.html">Marketing Digital</a></li>
+              <li><a class="dropdown-item" href="formations/rh.html">Ressources Humaines</a></li>
+              <li><a class="dropdown-item" href="formations/logistique.html">Logistique</a></li>
+              <li><a class="dropdown-item" href="formations/web-development.html">Développement Web</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-primary" href="poles.html">Voir tout</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-primary-custom text-white text-decoration-none" href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero-section text-center pt-5 pb-5 mt-5">
-    <div class="container mt-5">
-      <h1 class="display-4 fw-bold hero-title">Nos Pôles de Formation</h1>
-      <p class="lead text-muted mx-auto" style="max-width: 700px;">Explorez nos différents départements et trouvez la formation qui propulsera votre carrière vers de nouveaux sommets.</p>
+  <section class="hero-section text-center py-5" style="margin-top: 60px;">
+    <div class="container hero-content">
+      <h1 class="hero-title">Nos Pôles d'Excellence</h1>
+      <p class="hero-subtitle">Découvrez nos départements de formation spécialisés pour répondre aux besoins du marché.</p>
     </div>
-  </header>
+  </section>
 
-  <!-- Pôles Section -->
-  <section class="py-5">
-    <div class="container">
-
-      <!-- Pôle Gestion & Management -->
-      <div class="row mb-5 reveal active">
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <div class="pole-header h-100 d-flex flex-column justify-content-center align-items-center text-center">
-            <i class="bi bi-briefcase pole-icon"></i>
-            <h2 class="fw-bold">Gestion & Management</h2>
-            <p class="mb-0 text-white-50">Pilotez la performance des entreprises.</p>
-          </div>
-        </div>
-        <div class="col-lg-8">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <a href="formations/rh.html" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-shadow p-3 formation-list-item">
-                  <div class="d-flex align-items-center">
-                    <div class="bg-light rounded-circle p-3 me-3 text-primary"><i class="bi bi-people"></i></div>
-                    <div>
-                      <h5 class="fw-bold text-dark mb-1">Ressources Humaines</h5>
-                      <small class="text-muted">Recrutement, Paie, GPEC</small>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <a href="formations/finance.html" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-shadow p-3 formation-list-item">
-                  <div class="d-flex align-items-center">
-                    <div class="bg-light rounded-circle p-3 me-3 text-success"><i class="bi bi-graph-up-arrow"></i></div>
-                    <div>
-                      <h5 class="fw-bold text-dark mb-1">Comptabilité & Finance</h5>
-                      <small class="text-muted">Gestion, Audit, Fiscalité</small>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <a href="formations/marketing.html" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-shadow p-3 formation-list-item">
-                  <div class="d-flex align-items-center">
-                    <div class="bg-light rounded-circle p-3 me-3 text-warning"><i class="bi bi-megaphone"></i></div>
-                    <div>
-                      <h5 class="fw-bold text-dark mb-1">Marketing Digital</h5>
-                      <small class="text-muted">Stratégie, SEO, Ads</small>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <a href="formations/logistique.html" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-shadow p-3 formation-list-item">
-                  <div class="d-flex align-items-center">
-                    <div class="bg-light rounded-circle p-3 me-3 text-info"><i class="bi bi-truck"></i></div>
-                    <div>
-                      <h5 class="fw-bold text-dark mb-1">Logistique & Transport</h5>
-                      <small class="text-muted">Supply Chain, Import/Export</small>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
+  <!-- Poles Grid -->
+  <section class="container mb-5">
+    <div class="card-container">
+      <!-- Pole Marketing -->
+      <div class="formation-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">Marketing & Vente</h3>
+          <p class="formation-card-text">Formations en Marketing Digital, Gestion de la Relation Client, et Commerce International.</p>
+          <div class="formation-card-actions">
+            <a href="formations/marketing.html" class="card-link">Explorer</a>
           </div>
         </div>
       </div>
-
-      <!-- Pôle Informatique & Digital -->
-      <div class="row mb-5 reveal">
-        <div class="col-lg-4 mb-4 mb-lg-0 order-lg-2">
-          <div class="pole-header h-100 d-flex flex-column justify-content-center align-items-center text-center" style="background: linear-gradient(135deg, #4DB6AC, #2E8B57);">
-            <i class="bi bi-laptop pole-icon"></i>
-            <h2 class="fw-bold">Informatique & Digital</h2>
-            <p class="mb-0 text-white-50">Maîtrisez les technologies de demain.</p>
-          </div>
-        </div>
-        <div class="col-lg-8 order-lg-1">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <a href="formations/web-development.html" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-shadow p-3 formation-list-item">
-                  <div class="d-flex align-items-center">
-                    <div class="bg-light rounded-circle p-3 me-3 text-primary"><i class="bi bi-code-slash"></i></div>
-                    <div>
-                      <h5 class="fw-bold text-dark mb-1">Développement Web</h5>
-                      <small class="text-muted">Fullstack, Front/Back-end</small>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <a href="formations/systemes-reseaux.html" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-shadow p-3 formation-list-item">
-                  <div class="d-flex align-items-center">
-                    <div class="bg-light rounded-circle p-3 me-3 text-secondary"><i class="bi bi-hdd-network"></i></div>
-                    <div>
-                      <h5 class="fw-bold text-dark mb-1">Systèmes & Réseaux</h5>
-                      <small class="text-muted">Administration, Sécurité</small>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <a href="formations/design.html" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-shadow p-3 formation-list-item">
-                  <div class="d-flex align-items-center">
-                    <div class="bg-light rounded-circle p-3 me-3 text-danger"><i class="bi bi-palette"></i></div>
-                    <div>
-                      <h5 class="fw-bold text-dark mb-1">Infographie & Design</h5>
-                      <small class="text-muted">UX/UI, Adobe Suite</small>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <a href="formations/big-data.html" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-shadow p-3 formation-list-item">
-                  <div class="d-flex align-items-center">
-                    <div class="bg-light rounded-circle p-3 me-3 text-dark"><i class="bi bi-cpu"></i></div>
-                    <div>
-                      <h5 class="fw-bold text-dark mb-1">Big Data & IA</h5>
-                      <small class="text-muted">Data Science, Analytics</small>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
+      <!-- Pole RH -->
+      <div class="formation-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7985c2d11f99?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">Ressources Humaines</h3>
+          <p class="formation-card-text">Gestion administrative du personnel, recrutement, et paie.</p>
+          <div class="formation-card-actions">
+            <a href="formations/rh.html" class="card-link">Explorer</a>
           </div>
         </div>
       </div>
-
-      <!-- Pôle Technique & Santé -->
-      <div class="row mb-5 reveal">
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <div class="pole-header h-100 d-flex flex-column justify-content-center align-items-center text-center" style="background: linear-gradient(135deg, #F4B445, #E65100);">
-            <i class="bi bi-gear-wide-connected pole-icon"></i>
-            <h2 class="fw-bold">Technique & Santé</h2>
-            <p class="mb-0 text-white-50">Des métiers essentiels et concrets.</p>
-          </div>
-        </div>
-        <div class="col-lg-8">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <a href="formations/qhse.html" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-shadow p-3 formation-list-item">
-                  <div class="d-flex align-items-center">
-                    <div class="bg-light rounded-circle p-3 me-3 text-success"><i class="bi bi-shield-check"></i></div>
-                    <div>
-                      <h5 class="fw-bold text-dark mb-1">Responsable QHSE</h5>
-                      <small class="text-muted">Qualité, Hygiène, Sécurité</small>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <a href="formations/mecanique.html" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-shadow p-3 formation-list-item">
-                  <div class="d-flex align-items-center">
-                    <div class="bg-light rounded-circle p-3 me-3 text-secondary"><i class="bi bi-wrench-adjustable"></i></div>
-                    <div>
-                      <h5 class="fw-bold text-dark mb-1">Génie Mécanique</h5>
-                      <small class="text-muted">Maintenance, Industrielle</small>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <a href="formations/paramedical.html" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-shadow p-3 formation-list-item">
-                  <div class="d-flex align-items-center">
-                    <div class="bg-light rounded-circle p-3 me-3 text-danger"><i class="bi bi-heart-pulse"></i></div>
-                    <div>
-                      <h5 class="fw-bold text-dark mb-1">Paramédical</h5>
-                      <small class="text-muted">Santé, Soins Infirmiers</small>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-             <div class="col-md-6">
-              <a href="formations/langues.html" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm hover-shadow p-3 formation-list-item">
-                  <div class="d-flex align-items-center">
-                    <div class="bg-light rounded-circle p-3 me-3 text-primary"><i class="bi bi-translate"></i></div>
-                    <div>
-                      <h5 class="fw-bold text-dark mb-1">Langues Vivantes</h5>
-                      <small class="text-muted">Anglais, Français, Allemand</small>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
+      <!-- Pole Logistique -->
+      <div class="formation-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">Logistique & Transport</h3>
+          <p class="formation-card-text">Supply Chain Management, Gestion des stocks et achats.</p>
+          <div class="formation-card-actions">
+            <a href="formations/logistique.html" class="card-link">Explorer</a>
           </div>
         </div>
       </div>
-
+      <!-- Pole Digital -->
+      <div class="formation-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">Informatique & Digital</h3>
+          <p class="formation-card-text">Développement Web, Design Graphique, et Réseaux Informatiques.</p>
+          <div class="formation-card-actions">
+            <a href="formations/web-development.html" class="card-link">Explorer</a>
+          </div>
+        </div>
+      </div>
+      <!-- Pole QHSE -->
+      <div class="formation-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">QHSE</h3>
+          <p class="formation-card-text">Qualité, Hygiène, Sécurité et Environnement industriel.</p>
+          <div class="formation-card-actions">
+            <a href="formations/qhse.html" class="card-link">Explorer</a>
+          </div>
+        </div>
+      </div>
+       <!-- Pole Paramédical -->
+       <div class="formation-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">Paramédical</h3>
+          <p class="formation-card-text">Aide soignant, infirmier polyvalent et secrétariat médical.</p>
+          <div class="formation-card-actions">
+            <a href="formations/paramedical.html" class="card-link">Explorer</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center text-lg-start">
-    <div class="container p-4">
+  <footer id="contact">
+    <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase" style="color: var(--color-primary);">LTS ACADEMY</h5>
-          <p>
-            Votre partenaire pour la formation professionnelle et l'excellence académique.
-          </p>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Liens Utiles</h5>
-          <ul class="list-unstyled mb-0">
-            <li><a href="index.html" class="text-white">Accueil</a></li>
-            <li><a href="impact.html" class="text-white">Étude d'Impact</a></li>
-            <li><a href="poles.html" class="text-white">Nos Pôles</a></li>
-            <li><a href="index.html#contact" class="text-white">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Contact</h5>
-          <ul class="list-unstyled mb-0">
-            <li><i class="bi bi-telephone-fill me-2"></i> 0660-356877</li>
-            <li><i class="bi bi-telephone-fill me-2"></i> 0661-732848</li>
-            <li><i class="bi bi-geo-alt-fill me-2"></i> Berrechid, Maroc</li>
-          </ul>
-           <div class="mt-3">
-             <a href="https://facebook.com/LTSACADEMYBERRECHID" target="_blank" class="me-3 fs-4"><i class="bi bi-facebook"></i></a>
-             <a href="https://instagram.com/lts_academy_berrechid" target="_blank" class="fs-4"><i class="bi bi-instagram"></i></a>
+        <div class="col-lg-4 mb-4 footer-column">
+          <div class="d-flex align-items-center mb-3">
+             <img src="assets/lts.png" alt="LTS" style="height:32px; margin-right:10px;" onerror="this.style.display='none'">
+             <span class="h5 m-0 text-dark">LTS Academy</span>
+          </div>
+          <p>Centre de formation professionnelle dédié à l'excellence et à l'insertion professionnelle.</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="#" class="fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="fs-5"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
+        <div class="col-lg-2 col-6 mb-4 footer-column">
+          <h5>Formations</h5>
+          <ul>
+            <li><a href="formations/marketing.html">Marketing</a></li>
+            <li><a href="formations/rh.html">RH</a></li>
+            <li><a href="formations/logistique.html">Logistique</a></li>
+            <li><a href="formations/web-development.html">Dev Web</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6 mb-4 footer-column">
+          <h5>L'Académie</h5>
+          <ul>
+            <li><a href="#">À propos</a></li>
+            <li><a href="poles.html">Nos Pôles</a></li>
+            <li><a href="#">Partenaires</a></li>
+            <li><a href="#">Carrières</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 mb-4 footer-column">
+          <h5>Contact</h5>
+          <ul>
+            <li><i class="bi bi-geo-alt me-2"></i> Berrechid, Maroc</li>
+            <li><i class="bi bi-envelope me-2"></i> contact@ltsacademy.com</li>
+            <li><i class="bi bi-telephone me-2"></i> +212 661 732 848</li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2025 LTS Academy. Tous droits réservés.
+      <div class="footer-bottom text-center">
+        <p class="mb-0 text-muted">&copy; 2025 LTS Academy. Tous droits réservés.</p>
+      </div>
     </div>
   </footer>
 
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/212661732848" class="whatsapp-float" target="_blank">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Scroll Reveal Animation
-    window.addEventListener('scroll', reveal);
-
-    function reveal() {
-      var reveals = document.querySelectorAll('.reveal');
-
-      for (var i = 0; i < reveals.length; i++) {
-        var windowheight = window.innerHeight;
-        var revealtop = reveals[i].getBoundingClientRect().top;
-        var revealpoint = 150;
-
-        if (revealtop < windowheight - revealpoint) {
-          reveals[i].classList.add('active');
-        } else {
-          reveals[i].classList.remove('active');
-        }
-      }
-    }
-  </script>
-  </body>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/animations.js"></script>
+</body>
 </html>

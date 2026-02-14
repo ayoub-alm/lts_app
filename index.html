@@ -1,299 +1,197 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LTS ACADEMY - Formation Professionnelle & Consulting</title>
-    <link rel="shortcut icon" href="ltsAcademy.png" type="image/x-icon">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LTS Academy - Excellence en Formation</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="ltsAcademy.png" alt="LTS Academy" width="40" height="40" class="me-2">
-        <span>LTS ACADEMY</span>
+        <img src="assets/lts.png" alt="LTS Logo" width="40" height="40" class="me-2" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+        <span>LTS Academy</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-2">
           <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
           <li class="nav-item"><a class="nav-link" href="impact.html">Étude d’Impact</a></li>
           <li class="nav-item"><a class="nav-link" href="poles.html">Nos Pôles</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Formations
-            </a>
-            <ul class="dropdown-menu glass-panel border-0" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item fw-bold" href="poles.html">Toutes les formations</a></li>
-              <li><hr class="dropdown-divider"></li>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Formations</a>
+            <ul class="dropdown-menu border-0 shadow-lg" style="border-radius: 12px;">
               <li><a class="dropdown-item" href="formations/marketing.html">Marketing Digital</a></li>
               <li><a class="dropdown-item" href="formations/rh.html">Ressources Humaines</a></li>
-              <li><a class="dropdown-item" href="formations/finance.html">Comptabilité & Finance</a></li>
+              <li><a class="dropdown-item" href="formations/logistique.html">Logistique</a></li>
               <li><a class="dropdown-item" href="formations/web-development.html">Développement Web</a></li>
-              <li><a class="dropdown-item" href="formations/langues.html">Langues</a></li>
-              <li><a class="dropdown-item" href="formations/paramedical.html">Paramédical</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-primary" href="poles.html">Voir tout</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link btn btn-primary-custom text-white ms-lg-3 px-4" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-primary-custom text-white text-decoration-none" href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero-section">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 text-lg-start text-center mb-5 mb-lg-0 reveal active">
-          <h1 class="display-4 hero-title mb-4">Développez vos compétences avec <br><span>LTS ACADEMY</span></h1>
-          <p class="lead mb-4 text-muted">La formation qui convient le mieux à vos besoins professionnels. Rejoignez-nous pour booster votre carrière.</p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start justify-content-center">
-            <a href="#formations" class="btn btn-primary-custom btn-lg px-4 me-md-2">Découvrir nos formations</a>
-            <a href="impact.html" class="btn btn-neo btn-lg px-4">Étude d'Impact</a>
-          </div>
-        </div>
-        <div class="col-lg-6 text-center reveal active">
-          <img src="assets/lts.png" alt="LTS Academy Hero" class="img-fluid slogen" style="max-height: 450px;">
-        </div>
-      </div>
-    </div>
-
-    <!-- Artistic Wave Divider -->
-    <div class="custom-shape-divider-bottom-1689">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-        </svg>
-    </div>
-  </header>
-
-  <!-- Formations Section -->
-  <section id="formations" class="py-5">
-    <div class="container">
-      <div class="text-center mb-5 reveal">
-        <h2 class="section-title display-5">Nos Formations</h2>
-        <p class="lead text-muted">Des programmes adaptés aux exigences du marché du travail.</p>
-      </div>
-
-      <div class="row g-4">
-        <!-- Card 1: Marketing Digital -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="formation-card">
-            <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');"></div>
-            <div class="formation-card-body">
-              <h3 class="formation-card-title">Marketing Digital</h3>
-              <p class="card-text text-muted">Devenez un expert en stratégie digitale et communication web.</p>
-              <a href="formations/marketing.html" class="btn btn-neo mt-3">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2: Développement Web -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="formation-card">
-            <div class="formation-card-img" style="background-image: url('https://ccsav.ca/wp-content/uploads/2022/11/metier-developpeur-web-1.jpg');"></div>
-            <div class="formation-card-body">
-              <h3 class="formation-card-title">Développement Web</h3>
-              <p class="card-text text-muted">Maîtrisez les langages du web et devenez un développeur full-stack.</p>
-              <a href="formations/web-development.html" class="btn btn-neo mt-3">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3: Ressources Humaines -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="formation-card">
-            <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80');"></div>
-            <div class="formation-card-body">
-              <h3 class="formation-card-title">Ressources Humaines</h3>
-              <p class="card-text text-muted">Gérez le capital humain et développez les talents de l'entreprise.</p>
-              <a href="formations/rh.html" class="btn btn-neo mt-3">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4: Finance -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="formation-card">
-            <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');"></div>
-            <div class="formation-card-body">
-              <h3 class="formation-card-title">Comptabilité & Finance</h3>
-              <p class="card-text text-muted">Maîtrisez les chiffres clés et la gestion financière.</p>
-              <a href="formations/finance.html" class="btn btn-neo mt-3">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 5: Logistique -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="formation-card">
-            <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');"></div>
-            <div class="formation-card-body">
-              <h3 class="formation-card-title">Logistique & Transport</h3>
-              <p class="card-text text-muted">Optimisez la chaîne d'approvisionnement et les flux.</p>
-              <a href="formations/logistique.html" class="btn btn-neo mt-3">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6: Paramédical -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="formation-card">
-            <div class="formation-card-img" style="background-image: url('https://lafactory.ma/wp-content/uploads/2020/05/Paramedical-1024x768.jpeg');"></div>
-            <div class="formation-card-body">
-              <h3 class="formation-card-title">Paramédical</h3>
-              <p class="card-text text-muted">Formez-vous aux métiers de la santé avec des experts.</p>
-              <a href="formations/paramedical.html" class="btn btn-neo mt-3">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center mt-5">
-        <a href="poles.html" class="btn btn-primary-custom btn-lg px-5">Voir toutes nos formations</a>
+  <section class="hero-section d-flex align-items-center justify-content-center" style="margin-top: 60px;">
+    <div class="container hero-content text-center">
+      <h1 class="hero-title">Façonnez votre avenir <br><span style="color:var(--color-blue)">avec excellence</span></h1>
+      <p class="hero-subtitle">Des formations professionnelles certifiantes conçues pour booster votre carrière. Rejoignez une communauté d'apprenants passionnés.</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="poles.html" class="btn btn-primary-custom">Découvrir nos pôles <i class="bi bi-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-outline-secondary rounded-pill px-4 py-2" style="border:1px solid #dadce0;">Nous contacter</a>
       </div>
     </div>
   </section>
 
-  <!-- About / Banner Section -->
-  <section class="py-5" style="background-color: transparent;"> <!-- Removed bg-light -->
-    <div class="container">
-      <div class="row align-items-center glass-panel p-5 reveal">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <h2 class="display-5 fw-bold mb-3 section-title">Apprendre facilement</h2>
-          <p class="lead text-muted mb-4">
-            Élargissez vos compétences et explorez de nouvelles perspectives professionnelles.
-            Center Formation vous offre des programmes à distance et en présentiel spécialement conçus pour vous aider à réussir.
-          </p>
-          <ul class="list-unstyled">
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Formateurs expérimentés</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Programmes certifiants</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Flexibilité d'apprentissage</li>
-          </ul>
+  <!-- Features Section -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="formation-card h-100 p-4 border-0 shadow-sm" style="background:#f8f9fa;">
+          <div class="display-5 text-primary mb-3"><i class="bi bi-award"></i></div>
+          <h4>Certifications Reconnues</h4>
+          <p class="text-secondary">Obtenez des diplômes et certificats valorisés par les employeurs du secteur.</p>
         </div>
-        <div class="col-lg-6 text-center">
-          <img src="banner_img.png" alt="Learning Banner" class="img-fluid rounded shadow-lg" style="transform: rotate(2deg); border: 5px solid white;">
+      </div>
+      <div class="col-md-4">
+        <div class="formation-card h-100 p-4 border-0 shadow-sm" style="background:#f8f9fa;">
+          <div class="display-5 text-success mb-3"><i class="bi bi-people"></i></div>
+          <h4>Formateurs Experts</h4>
+          <p class="text-secondary">Apprenez auprès de professionnels ayant une riche expérience terrain.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="formation-card h-100 p-4 border-0 shadow-sm" style="background:#f8f9fa;">
+          <div class="display-5 text-warning mb-3"><i class="bi bi-laptop"></i></div>
+          <h4>Pédagogie Moderne</h4>
+          <p class="text-secondary">Une approche pratique mêlant théorie, projets réels et stages en entreprise.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 reveal">
-          <div class="glass-panel p-5">
-            <div class="card-body">
-              <h2 class="text-center mb-4 fw-bold section-title">Contactez-nous</h2>
-              <p class="text-center text-muted mb-5">Une question ? Un devis ? Remplissez ce formulaire et nous vous répondrons dans les plus brefs délais.</p>
-
-              <form>
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label ps-3">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="exemple@email.com">
-                  </div>
-                  <div class="col-md-6">
-                    <label for="inputPhone" class="form-label ps-3">Téléphone</label>
-                    <input type="tel" class="form-control" id="inputPhone" placeholder="06XXXXXXXX">
-                  </div>
-                  <div class="col-12">
-                    <label for="inputCity" class="form-label ps-3">Ville</label>
-                    <input type="text" class="form-control" id="inputCity">
-                  </div>
-                  <div class="col-12">
-                    <label for="inputSubject" class="form-label ps-3">Objet</label>
-                    <input type="text" class="form-control" id="inputSubject">
-                  </div>
-                  <div class="col-12">
-                    <label for="inputMessage" class="form-label ps-3">Votre message</label>
-                    <textarea class="form-control" id="inputMessage" rows="5"></textarea>
-                  </div>
-                  <div class="col-12 text-center mt-4">
-                    <button type="submit" class="btn btn-primary-custom text-white btn-lg px-5">Envoyer</button>
-                  </div>
-                </div>
-              </form>
-            </div>
+  <!-- Formations Highlight -->
+  <section class="container my-5">
+    <h2 class="section-title text-center">Nos Formations Phares</h2>
+    <div class="card-container">
+      <!-- Marketing -->
+      <div class="formation-card gsap-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">Marketing Digital</h3>
+          <p class="formation-card-text">Maîtrisez les stratégies digitales, le SEO, et les réseaux sociaux.</p>
+          <div class="formation-card-actions">
+            <a href="formations/marketing.html" class="card-link">En savoir plus</a>
           </div>
         </div>
       </div>
+      <!-- RH -->
+      <div class="formation-card gsap-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7985c2d11f99?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">Ressources Humaines</h3>
+          <p class="formation-card-text">Gestion du personnel, recrutement et développement des talents.</p>
+          <div class="formation-card-actions">
+            <a href="formations/rh.html" class="card-link">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+      <!-- Logistique -->
+      <div class="formation-card gsap-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">Logistique & Transport</h3>
+          <p class="formation-card-text">Optimisez la supply chain et gérez les flux internationaux.</p>
+          <div class="formation-card-actions">
+            <a href="formations/logistique.html" class="card-link">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="poles.html" class="btn btn-outline-primary rounded-pill px-4">Voir toutes les formations</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center text-lg-start">
-    <div class="container p-4">
+  <footer id="contact">
+    <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase" style="color: var(--color-primary);">LTS ACADEMY</h5>
-          <p>
-            Votre partenaire pour la formation professionnelle et l'excellence académique.
-          </p>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Liens Utiles</h5>
-          <ul class="list-unstyled mb-0">
-            <li><a href="index.html" class="text-white">Accueil</a></li>
-            <li><a href="impact.html" class="text-white">Étude d'Impact</a></li>
-            <li><a href="#formations" class="text-white">Formations</a></li>
-            <li><a href="#contact" class="text-white">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Contact</h5>
-          <ul class="list-unstyled mb-0">
-            <li><i class="bi bi-telephone-fill me-2"></i> 0660-356877</li>
-            <li><i class="bi bi-telephone-fill me-2"></i> 0661-732848</li>
-            <li><i class="bi bi-geo-alt-fill me-2"></i> Berrechid, Maroc</li>
-          </ul>
-          <div class="mt-3">
-             <a href="https://facebook.com/LTSACADEMYBERRECHID" target="_blank" class="me-3 fs-4"><i class="bi bi-facebook"></i></a>
-             <a href="https://instagram.com/lts_academy_berrechid" target="_blank" class="fs-4"><i class="bi bi-instagram"></i></a>
+        <div class="col-lg-4 mb-4 footer-column">
+          <div class="d-flex align-items-center mb-3">
+             <img src="assets/lts.png" alt="LTS" style="height:32px; margin-right:10px;" onerror="this.style.display='none'">
+             <span class="h5 m-0 text-dark">LTS Academy</span>
+          </div>
+          <p>Centre de formation professionnelle dédié à l'excellence et à l'insertion professionnelle.</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="#" class="fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="fs-5"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
+        <div class="col-lg-2 col-6 mb-4 footer-column">
+          <h5>Formations</h5>
+          <ul>
+            <li><a href="formations/marketing.html">Marketing</a></li>
+            <li><a href="formations/rh.html">RH</a></li>
+            <li><a href="formations/logistique.html">Logistique</a></li>
+            <li><a href="formations/web-development.html">Dev Web</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6 mb-4 footer-column">
+          <h5>L'Académie</h5>
+          <ul>
+            <li><a href="#">À propos</a></li>
+            <li><a href="poles.html">Nos Pôles</a></li>
+            <li><a href="#">Partenaires</a></li>
+            <li><a href="#">Carrières</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 mb-4 footer-column">
+          <h5>Contact</h5>
+          <ul>
+            <li><i class="bi bi-geo-alt me-2"></i> Berrechid, Maroc</li>
+            <li><i class="bi bi-envelope me-2"></i> contact@ltsacademy.com</li>
+            <li><i class="bi bi-telephone me-2"></i> +212 661 732 848</li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2025 LTS Academy. Tous droits réservés.
+      <div class="footer-bottom text-center">
+        <p class="mb-0 text-muted">&copy; 2025 LTS Academy. Tous droits réservés.</p>
+      </div>
     </div>
   </footer>
 
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/212661732848?text=Bonjour%2C%20je%20suis%20intéressé%20par%20vos%20formations!" class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/212661732848" class="whatsapp-float" target="_blank">
     <i class="bi bi-whatsapp"></i>
   </a>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script>
-    // Scroll Reveal Animation
-    window.addEventListener('scroll', reveal);
-
-    function reveal() {
-      var reveals = document.querySelectorAll('.reveal');
-
-      for (var i = 0; i < reveals.length; i++) {
-        var windowheight = window.innerHeight;
-        var revealtop = reveals[i].getBoundingClientRect().top;
-        var revealpoint = 150;
-
-        if (revealtop < windowheight - revealpoint) {
-          reveals[i].classList.add('active');
-        } else {
-          reveals[i].classList.remove('active');
-        }
-      }
-    }
-  </script>
-  </body>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/animations.js"></script>
+</body>
 </html>
