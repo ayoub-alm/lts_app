@@ -1,0 +1,321 @@
+/* Google Material Design 3 Style */
+
+:root {
+  /* Google Brand Colors */
+  --color-blue: #1a73e8; /* Google Blue */
+  --color-red: #ea4335;   /* Google Red */
+  --color-yellow: #fbbc04; /* Google Yellow */
+  --color-green: #34a853;  /* Google Green */
+
+  /* Neutral Colors */
+  --color-bg: #FFFFFF;
+  --color-surface: #F8F9FA; /* Light Gray Surface */
+  --color-surface-variant: #F1F3F4;
+  --color-text-primary: #202124;
+  --color-text-secondary: #5f6368;
+  --color-border: #dadce0;
+
+  /* Typography */
+  --font-family: 'Google Sans', 'Roboto', 'Helvetica Neue', sans-serif;
+
+  /* Shapes */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 50px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-float: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  padding-top: 64px; /* Fixed navbar height */
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  color: var(--color-text-primary);
+  margin-bottom: 0.5em;
+  font-weight: 500; /* Google style is often lighter/cleaner */
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-blue);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #174ea6; /* Darker blue */
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: none; /* Cleaner look, shadow only on scroll via JS potentially */
+  padding: 0.5rem 1rem;
+  height: 64px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  gap: 0.5rem;
+}
+
+.navbar-brand img {
+  height: 32px; /* Consistent logo size */
+  width: auto;
+}
+
+.navbar-brand span {
+  color: var(--color-text-primary);
+  letter-spacing: -0.5px;
+}
+
+.nav-link {
+  color: var(--color-text-secondary) !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  border-radius: var(--radius-pill);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--color-blue) !important;
+  background-color: #e8f0fe; /* Light blue tint */
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 80px 0 60px;
+  background-color: var(--color-bg);
+  text-align: center; /* Centered layout for "Google Store" vibe */
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 400; /* Thin, elegant */
+  letter-spacing: -1px;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.btn-primary-custom {
+  background-color: var(--color-blue);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm); /* Slightly rounded rects, not full pills often */
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary-custom:hover {
+  background-color: #1967d2;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+  color: white;
+}
+
+/* Cards (Formations/Poles) */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 24px 0;
+}
+
+.formation-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formation-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: transparent;
+}
+
+.formation-card-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.formation-card-body {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.formation-card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-primary);
+}
+
+.formation-card-text {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.formation-card-actions {
+  display: flex;
+  justify-content: flex-end; /* Align link to right */
+}
+
+.card-link {
+  color: var(--color-blue);
+  font-weight: 500;
+  text-transform: uppercase; /* Or normal, Google uses both */
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: 60px 0 30px;
+  margin-top: 60px;
+  color: var(--color-text-secondary);
+}
+
+.footer-column h5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-column a {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.footer-column a:hover {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-border);
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #25D366;
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  box-shadow: var(--shadow-float);
+  transition: transform 0.2s ease;
+  z-index: 2000;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+/* Utility */
+.text-center { text-align: center; }
+.mt-5 { margin-top: 3rem; }
+.mb-5 { margin-bottom: 3rem; }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--color-text-primary);
+}
+
+/* Animation Classes (GSAP targets) */
+.gsap-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Étude d’Impact - LTS Academy</title>
+  <title>Nos Pôles - LTS Academy</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +20,8 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/lts.png" alt="LTS Logo" width="40" height="40" class="me-2" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/lts.png" alt="LTS Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
         <span>LTS Academy</span>
       </a>
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -30,8 +30,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav gap-2">
           <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link active" href="impact.html">Étude d’Impact</a></li>
-          <li class="nav-item"><a class="nav-link" href="poles.html">Nos Pôles</a></li>
+          <li class="nav-item"><a class="nav-link active" href="poles.html">Nos Pôles</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Formations</a>
             <ul class="dropdown-menu border-0 shadow-lg" style="border-radius: 12px;">
@@ -43,8 +42,9 @@
               <li><a class="dropdown-item text-primary" href="poles.html">Voir tout</a></li>
             </ul>
           </li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           <li class="nav-item ms-lg-3">
-            <a class="btn btn-primary-custom text-white text-decoration-none" href="#contact">Contact</a>
+            <a class="btn btn-primary-custom text-white text-decoration-none" href="#apply">S'inscrire</a>
           </li>
         </ul>
       </div>
@@ -54,30 +54,78 @@
   <!-- Hero Section -->
   <section class="hero-section text-center py-5" style="margin-top: 60px;">
     <div class="container hero-content">
-      <h1 class="hero-title">Notre Impact</h1>
-      <p class="hero-subtitle">Découvrez comment LTS Academy transforme des carrières et impacte le marché du travail.</p>
+      <h1 class="hero-title">Nos Pôles d'Excellence</h1>
+      <p class="hero-subtitle">Découvrez nos départements de formation spécialisés pour répondre aux besoins du marché.</p>
     </div>
   </section>
 
-  <!-- Content -->
+  <!-- Poles Grid -->
   <section class="container mb-5">
-    <div class="row text-center g-4">
-      <div class="col-md-4">
-        <div class="p-4 border rounded shadow-sm bg-white">
-          <h2 class="display-4 fw-bold text-primary">85%</h2>
-          <p class="lead">Taux d'insertion professionnelle</p>
+    <div class="card-container">
+      <!-- Pole Marketing -->
+      <div class="formation-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">Marketing & Vente</h3>
+          <p class="formation-card-text">Formations en Marketing Digital, Gestion de la Relation Client, et Commerce International.</p>
+          <div class="formation-card-actions">
+            <a href="formations/marketing.html" class="card-link">Explorer</a>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="p-4 border rounded shadow-sm bg-white">
-          <h2 class="display-4 fw-bold text-success">100+</h2>
-          <p class="lead">Entreprises Partenaires</p>
+      <!-- Pole RH -->
+      <div class="formation-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7985c2d11f99?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">Ressources Humaines</h3>
+          <p class="formation-card-text">Gestion administrative du personnel, recrutement, et paie.</p>
+          <div class="formation-card-actions">
+            <a href="formations/rh.html" class="card-link">Explorer</a>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="p-4 border rounded shadow-sm bg-white">
-          <h2 class="display-4 fw-bold text-warning">500+</h2>
-          <p class="lead">Diplômés en 2024</p>
+      <!-- Pole Logistique -->
+      <div class="formation-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">Logistique & Transport</h3>
+          <p class="formation-card-text">Supply Chain Management, Gestion des stocks et achats.</p>
+          <div class="formation-card-actions">
+            <a href="formations/logistique.html" class="card-link">Explorer</a>
+          </div>
+        </div>
+      </div>
+      <!-- Pole Digital -->
+      <div class="formation-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">Informatique & Digital</h3>
+          <p class="formation-card-text">Développement Web, Design Graphique, et Réseaux Informatiques.</p>
+          <div class="formation-card-actions">
+            <a href="formations/web-development.html" class="card-link">Explorer</a>
+          </div>
+        </div>
+      </div>
+      <!-- Pole QHSE -->
+      <div class="formation-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">QHSE</h3>
+          <p class="formation-card-text">Qualité, Hygiène, Sécurité et Environnement industriel.</p>
+          <div class="formation-card-actions">
+            <a href="formations/qhse.html" class="card-link">Explorer</a>
+          </div>
+        </div>
+      </div>
+       <!-- Pole Paramédical -->
+       <div class="formation-card">
+        <div class="formation-card-img" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+        <div class="formation-card-body">
+          <h3 class="formation-card-title">Paramédical</h3>
+          <p class="formation-card-text">Aide soignant, infirmier polyvalent et secrétariat médical.</p>
+          <div class="formation-card-actions">
+            <a href="formations/paramedical.html" class="card-link">Explorer</a>
+          </div>
         </div>
       </div>
     </div>
@@ -112,7 +160,7 @@
           <h5>L'Académie</h5>
           <ul>
             <li><a href="#">À propos</a></li>
-            <li><a href="poles.html">Nos Pôles</a></li>
+            <li><a href="#">Nos Pôles</a></li>
             <li><a href="#">Partenaires</a></li>
             <li><a href="#">Carrières</a></li>
           </ul>
