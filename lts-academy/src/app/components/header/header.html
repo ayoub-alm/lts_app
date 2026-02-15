@@ -1,0 +1,32 @@
+<mat-toolbar color="primary" class="fixed-top shadow-sm">
+  <a routerLink="/" class="d-flex align-items-center text-white text-decoration-none me-4">
+    <img src="assets/ltsAcademy.png" alt="LTS Academy" width="40" height="40" class="me-2 bg-white rounded-circle p-1">
+    <span class="fw-bold d-none d-sm-block">LTS ACADEMY</span>
+  </a>
+
+  <span class="spacer"></span>
+
+  <div class="d-none d-md-flex align-items-center gap-2">
+    <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
+    <button mat-button [matMenuTriggerFor]="formationsMenu">Formations <mat-icon>expand_more</mat-icon></button>
+    <mat-menu #formationsMenu="matMenu">
+      <a mat-menu-item routerLink="/formations/paramedical">Paramédical</a>
+      <a mat-menu-item routerLink="/formations/web-development">Développement Web</a>
+      <a mat-menu-item routerLink="/formations/mecanique">Génie Mécanique</a>
+      <a mat-menu-item routerLink="/formations/qhse">QHSE</a>
+      <a mat-menu-item routerLink="/poles">Toutes les formations</a>
+    </mat-menu>
+    <a mat-button routerLink="/impact" routerLinkActive="active">Étude d’Impact</a>
+    <a mat-raised-button color="accent" routerLink="/" fragment="contact" class="ms-2">Contact</a>
+  </div>
+
+  <button mat-icon-button [matMenuTriggerFor]="mobileMenu" class="d-md-none text-white">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #mobileMenu="matMenu">
+    <a mat-menu-item routerLink="/">Accueil</a>
+    <a mat-menu-item routerLink="/poles">Formations</a>
+    <a mat-menu-item routerLink="/impact">Étude d’Impact</a>
+    <a mat-menu-item routerLink="/" fragment="contact">Contact</a>
+  </mat-menu>
+</mat-toolbar>

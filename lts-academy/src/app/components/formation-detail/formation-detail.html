@@ -1,0 +1,84 @@
+<div *ngIf="formation; else notFound">
+  <header class="text-white position-relative" style="min-height: 60vh;">
+    <div class="position-absolute top-0 start-0 w-100 h-100" [style.background]="'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(' + formation.image + ') center/cover no-repeat'"></div>
+    <div class="container h-100 position-relative d-flex align-items-center" style="min-height: 60vh;">
+      <div class="bg-blur p-5 rounded-3" style="backdrop-filter: blur(10px); background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.2);">
+        <h1 class="display-3 fw-bold mb-3">{{ formation.title }}</h1>
+        <p class="lead mb-4 fs-3">{{ formation.subtitle }}</p>
+        <a href="#programme" mat-raised-button color="accent" class="fs-5 px-4 py-2" style="border-radius: 50px;">Voir le programme</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container py-5">
+    <div class="row g-5">
+      <div class="col-lg-8">
+        <section class="mb-5">
+          <h2 class="text-primary fw-bold mb-4">Présentation</h2>
+          <p class="lead text-muted">{{ formation.presentation }}</p>
+        </section>
+
+        <section id="programme" class="mb-5" *ngIf="formation.program && formation.program.length > 0">
+          <h2 class="text-primary fw-bold mb-4">Programme de la Formation</h2>
+          <div class="row g-4">
+            <div class="col-md-6" *ngFor="let module of formation.program">
+              <mat-card class="h-100 shadow-sm border-0 bg-light">
+                <mat-card-header>
+                  <mat-card-title class="fs-5 fw-bold text-dark mb-2">
+                    <mat-icon class="align-middle me-2 text-primary">check_circle</mat-icon>
+                    {{ module.title }}
+                  </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p class="mb-0 text-muted">{{ module.description }}</p>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="sticky-top" style="top: 80px; z-index: 1;">
+          <mat-card class="mb-4 shadow-sm border-0">
+            <mat-card-header class="bg-primary text-white p-3 rounded-top">
+              <mat-card-title class="mb-0 fs-5">Débouchés Professionnels</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="p-0">
+              <mat-list>
+                <mat-list-item *ngFor="let opp of formation.opportunities">
+                  <mat-icon matListItemIcon class="text-success">work</mat-icon>
+                  <div matListItemTitle>{{ opp }}</div>
+                </mat-list-item>
+                <mat-list-item *ngIf="!formation.opportunities || formation.opportunities.length === 0">
+                  <div matListItemTitle class="text-muted fst-italic">Opportunités variées</div>
+                </mat-list-item>
+              </mat-list>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card class="shadow-sm border-0 bg-secondary text-white">
+            <mat-card-content class="p-4 text-center">
+              <h3 class="fw-bold mb-3">Intéressé(e) ?</h3>
+              <p>Inscrivez-vous dès maintenant ou demandez plus d'informations.</p>
+              <a routerLink="/" fragment="contact" mat-raised-button color="primary" class="w-100 mb-2">S'inscrire</a>
+              <a href="https://wa.me/212660356877" mat-stroked-button class="w-100 text-white border-white">
+                <mat-icon class="align-middle me-2">chat</mat-icon> WhatsApp
+              </a>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #notFound>
+  <div class="container py-5 text-center" style="min-height: 60vh; display: flex; flex-direction: column; justify-content: center;">
+    <h1 class="display-1 fw-bold text-muted">404</h1>
+    <p class="lead mb-4">Formation introuvable.</p>
+    <div>
+      <a routerLink="/poles" mat-raised-button color="primary">Retour aux formations</a>
+    </div>
+  </div>
+</ng-template>
