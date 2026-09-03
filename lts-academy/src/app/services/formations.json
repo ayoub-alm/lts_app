@@ -1,0 +1,199 @@
+[
+  {
+    "id": "rh",
+    "title": "Ressources Humaines",
+    "subtitle": "Gérez le capital humain et développez les talents.",
+    "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80",
+    "presentation": "Apprenez à gérer le recrutement, la paie, la formation et les relations sociales au sein de l'entreprise.",
+    "program": [],
+    "opportunities": []
+  },
+  {
+    "id": "marketing",
+    "title": "Marketing Digital",
+    "subtitle": "Devenez un expert en stratégie digitale et communication web.",
+    "image": "https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    "presentation": "Cette formation vous permet de maîtriser les outils du webmarketing, du SEO aux réseaux sociaux, pour booster la visibilité et les ventes d'une entreprise.",
+    "program": [],
+    "opportunities": []
+  },
+  {
+    "id": "mecanique",
+    "title": "Génie Mécanique",
+    "subtitle": "Concevez et maintenez les systèmes mécaniques de demain.",
+    "image": "https://ft.univ-tlemcen.dz/assets/uploads/_Images/D%C3%A9partements/mechanic_unsa_arequipa_peru_02-878x426.jpg",
+    "presentation": "Le génie mécanique est au cœur de l'industrie moderne. Notre formation couvre la conception, la fabrication et la maintenance des systèmes mécaniques.\n            Vous apprendrez à utiliser des logiciels de CAO/DAO, à comprendre les matériaux et à gérer des projets industriels.",
+    "program": [
+      {
+        "title": "Conception (CAO)",
+        "description": "Maîtrise de SolidWorks, AutoCAD et Catia pour la modélisation 3D."
+      },
+      {
+        "title": "Maintenance Industrielle",
+        "description": "Diagnostic de pannes, maintenance préventive et corrective."
+      },
+      {
+        "title": "Automatisme",
+        "description": "Programmation d'automates et pilotage de systèmes robotisés."
+      }
+    ],
+    "opportunities": [
+      "Technicien Bureau d'Études",
+      "Responsable Maintenance",
+      "Opérateur Commande Numérique",
+      "Dessinateur Industriel"
+    ]
+  },
+  {
+    "id": "design",
+    "title": "Infographie et Design",
+    "subtitle": "Exprimez votre créativité à travers le design graphique.",
+    "image": "https://images.unsplash.com/photo-1626785774573-4b799312c95d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    "presentation": "Maîtrisez la suite Adobe (Photoshop, Illustrator, InDesign) et les principes du design pour créer des visuels percutants.",
+    "program": [],
+    "opportunities": []
+  },
+  {
+    "id": "paramedical",
+    "title": "Formation Paramédicale",
+    "subtitle": "Devenez un professionnel de santé compétent et qualifié.",
+    "image": "https://lafactory.ma/wp-content/uploads/2020/05/Paramedical-1024x768.jpeg",
+    "presentation": "Le secteur paramédical est en pleine expansion et offre de nombreuses opportunités de carrière.\n                Notre formation vous prépare aux métiers d'aide-soignant, d'infirmier auxiliaire, et d'autres spécialités paramédicales.\n                Vous acquerrez les connaissances théoriques et les compétences pratiques nécessaires pour exceller dans ce domaine exigeant et humain.",
+    "program": [
+      {
+        "title": "Soins Infirmiers",
+        "description": "Techniques de soins de base, hygiène, et confort du patient."
+      },
+      {
+        "title": "Anatomie & Physiologie",
+        "description": "Compréhension du corps humain et de ses fonctions vitales."
+      },
+      {
+        "title": "Secourisme",
+        "description": "Gestes de premiers secours et gestion des urgences médicales."
+      },
+      {
+        "title": "Relation Patient",
+        "description": "Psychologie du malade, communication et éthique professionnelle."
+      }
+    ],
+    "opportunities": [
+      "Hôpitaux Publics & Privés",
+      "Cliniques",
+      "Cabinets Médicaux",
+      "Centres de Soins"
+    ]
+  },
+  {
+    "id": "finance",
+    "title": "Comptabilité et Finance",
+    "subtitle": "Maîtrisez les chiffres clés de l'entreprise.",
+    "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    "presentation": "Une formation complète pour devenir autonome en comptabilité générale, analytique et en gestion financière.",
+    "program": [],
+    "opportunities": []
+  },
+  {
+    "id": "web-development",
+    "title": "Développement Web Full-Stack",
+    "subtitle": "Maîtrisez les technologies du web et créez des sites modernes et performants.",
+    "image": "https://ccsav.ca/wp-content/uploads/2022/11/metier-developpeur-web-1.jpg",
+    "presentation": "Le métier de développeur web est l'un des plus recherchés aujourd'hui. Cette formation intensive vous permet d'acquérir\n                toutes les compétences nécessaires pour concevoir et développer des sites web dynamiques, des applications web et des interfaces utilisateurs modernes.\n                Que vous soyez débutant ou que vous souhaitiez vous perfectionner, notre programme s'adapte à votre niveau.",
+    "program": [
+      {
+        "title": "Front-End",
+        "description": "HTML5, CSS3, JavaScript, React/Vue.js pour créer des interfaces interactives."
+      },
+      {
+        "title": "Back-End",
+        "description": "Node.js, PHP, Python, et gestion des bases de données (SQL/NoSQL)."
+      },
+      {
+        "title": "Outils & DevOps",
+        "description": "Git, Docker, déploiement sur le cloud et méthodologies Agiles."
+      }
+    ],
+    "opportunities": [
+      "Développeur Front-End",
+      "Développeur Back-End",
+      "Développeur Full-Stack",
+      "Freelance / Entrepreneur"
+    ]
+  },
+  {
+    "id": "langues",
+    "title": "Formations en Langues",
+    "subtitle": "Communiquez sans frontières et boostez votre employabilité.",
+    "image": "https://www.ipac-traductions.com/wp-content/uploads/2021/05/langues-les-plus-parlees-1080x675-1.jpg",
+    "presentation": "Que ce soit pour voyager, travailler à l'étranger ou simplement enrichir votre culture personnelle,\n            la maîtrise d'une ou plusieurs langues étrangères est un atout majeur. Nos cours sont dispensés par des formateurs expérimentés\n            et basés sur la pratique orale et écrite.",
+    "program": [
+      {
+        "title": "Anglais",
+        "description": "Business English, préparation au TOEFL/IELTS ou anglais général."
+      },
+      {
+        "title": "Français",
+        "description": "Perfectionnement, communication professionnelle et préparation au DELF/DALF."
+      },
+      {
+        "title": "Allemand",
+        "description": "Apprentissage de la langue de Goethe pour les études ou le travail en Allemagne."
+      }
+    ],
+    "opportunities": []
+  },
+  {
+    "id": "systemes-reseaux",
+    "title": "Systèmes et Réseaux",
+    "subtitle": "Assurez la connectivité et la sécurité des infrastructures.",
+    "image": "https://images.unsplash.com/photo-1558494949-ef526b0042a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    "presentation": "Formation technique pour installer, configurer et maintenir les réseaux informatiques et les serveurs d'entreprise.",
+    "program": [],
+    "opportunities": []
+  },
+  {
+    "id": "logistique",
+    "title": "Logistique et Transport",
+    "subtitle": "Optimisez la chaîne d'approvisionnement et les flux.",
+    "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    "presentation": "Devenez un acteur clé de la Supply Chain en maîtrisant les processus de transport, stockage et distribution.",
+    "program": [],
+    "opportunities": []
+  },
+  {
+    "id": "big-data",
+    "title": "Big Data et IA",
+    "subtitle": "Entrez dans l'ère de la donnée et de l'intelligence artificielle.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    "presentation": "Apprenez à collecter, traiter et analyser des volumes massifs de données pour en extraire de la valeur.",
+    "program": [],
+    "opportunities": []
+  },
+  {
+    "id": "qhse",
+    "title": "Responsable QHSE",
+    "subtitle": "Assurez la Qualité, l'Hygiène, la Sécurité et l'Environnement en entreprise.",
+    "image": "https://www.onisep.fr/var/onisep/storage/images/7/2/2/4/9564227-7-fre-FR/530f0f6cd392-charge-e-hygiene-securite-environnement-HSE.jpg",
+    "presentation": "Le Responsable QHSE a pour mission de définir et mettre en œuvre la politique qualité, hygiène, sécurité et environnement de l'entreprise.\n            Il veille à la conformité réglementaire, prévient les risques professionnels et environnementaux, et améliore la performance globale.\n            Cette formation vous donne les outils pour exceller dans ce poste stratégique.",
+    "program": [
+      {
+        "title": "Management Qualité",
+        "description": "Maîtrise de la norme ISO 9001 et des outils d'amélioration continue."
+      },
+      {
+        "title": "Sécurité au Travail",
+        "description": "Norme ISO 45001, évaluation des risques professionnels et prévention."
+      },
+      {
+        "title": "Environnement",
+        "description": "Norme ISO 14001, gestion des déchets et développement durable."
+      }
+    ],
+    "opportunities": [
+      "Responsable QHSE",
+      "Consultant QHSE",
+      "Coordinateur Sécurité",
+      "Auditeur Qualité"
+    ]
+  }
+]
