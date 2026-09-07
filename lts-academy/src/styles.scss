@@ -19,21 +19,318 @@ $lts-academy-theme: mat.m2-define-light-theme((
 
 @include mat.all-component-themes($lts-academy-theme);
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// ─── Google Material Design 3 Theme Variables ──────────────────────────────
+:root {
+  /* Google Brand Colors */
+  --color-blue:            #1a73e8; /* Google Blue */
+  --color-blue-hover:      #174ea6;
+  --color-red:             #ea4335; /* Google Red */
+  --color-yellow:          #fbbc04; /* Google Yellow */
+  --color-green:           #34a853; /* Google Green */
+
+  /* Neutral Colors */
+  --color-bg:              #FFFFFF;
+  --color-surface:         #F8F9FA; /* Light Gray Surface */
+  --color-surface-variant: #F1F3F4;
+  --color-text-primary:    #202124;
+  --color-text-secondary:  #5f6368;
+  --color-border:          #dadce0;
+
+  /* Aliases for legacy component compatibility */
+  --color-primary:         #1a73e8;
+  --color-accent:          #174ea6;
+
+  /* Typography */
+  --font-family: 'Google Sans', 'Roboto', 'Helvetica Neue', sans-serif;
+
+  /* Shapes */
+  --radius-sm:   8px;
+  --radius-md:   16px;
+  --radius-lg:   24px;
+  --radius-pill: 50px;
+
+  /* Shadows */
+  --shadow-sm:    0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+  --shadow-md:    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg:    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-float: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);
+  --transition:   0.25s ease;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 74px;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+#contact,
+#formations,
+#apply {
+  scroll-margin-top: 74px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  color: var(--color-text-primary);
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-blue);
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-blue-hover);
+  }
+}
+
+// ─── Force Material Icons font for mat-icon ──────────────────────────────────
+.material-icons,
+mat-icon {
+  font-family: 'Material Icons' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.25rem;
 }
+
 .spacer { flex: 1 1 auto; }
 .hover-white:hover { color: white !important; }
 
-.hover-elevate {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+// ─── Modern Buttons (from moderen-desine) ────────────────────────────────────
+.btn-primary-custom,
+.btn-primary-lts {
+  background-color: var(--color-blue);
+  color: white !important;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-family: var(--font-family);
+
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    background-color: #1967d2;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+    color: white !important;
+  }
+}
+
+.btn-pill {
+  border-radius: var(--radius-pill) !important;
+}
+
+.btn-outline-pill {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 10px 24px;
+  color: var(--color-text-secondary);
+  background: transparent;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+    border-color: #bdc1c6;
+  }
+}
+
+// ─── Modern Formation Card System (from moderen-desine) ──────────────────────
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 24px 0;
+}
+
+.formation-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+    border-color: transparent;
+  }
+}
+
+.formation-card-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.formation-card-body {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.formation-card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-primary);
+}
+
+.formation-card-text {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.formation-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-link {
+  color: var(--color-blue);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--color-blue-hover);
+  }
+}
+
+// ─── Section Title ──────────────────────────────────────────────────────────
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--color-text-primary);
+  letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 36px;
+}
+
+// ─── WhatsApp Float Button ──────────────────────────────────────────────────
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #25D366;
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  box-shadow: var(--shadow-float);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1030;
+  text-decoration: none;
+
+  &:hover {
+    transform: scale(1.1);
+    color: white;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  }
+}
+
+// ─── Form Inputs ────────────────────────────────────────────────────────────
+.form-control {
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-sm) !important;
+  font-family: var(--font-family);
+
+  &:focus {
+    border-color: var(--color-blue) !important;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15) !important;
+    background: white !important;
+  }
+}
+
+// ─── Badges ────────────────────────────────────────────────────────────────
+.badge-modern {
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+// ─── Footer ────────────────────────────────────────────────────────────────
+footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: 60px 0 30px;
+  margin-top: 60px;
+  color: var(--color-text-secondary);
+
+  a {
+    color: var(--color-text-secondary);
+    transition: color var(--transition);
+
+    &:hover {
+      color: var(--color-blue);
+      text-decoration: underline;
+    }
   }
 }

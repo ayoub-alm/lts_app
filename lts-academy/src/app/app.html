@@ -1,7 +1,16 @@
 <div class="d-flex flex-column min-vh-100">
   <app-header></app-header>
-  <main class="flex-grow-1" style="padding-top: 64px;">
+  <main class="flex-grow-1" style="padding-top: 66px;">
     <router-outlet></router-outlet>
   </main>
   <app-footer></app-footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/212661732848?text=Bonjour%2C%20je%20souhaite%20plus%20d'informations%20sur%20LTS%20Academy."
+    class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- AI Chatbot -->
+  <app-chatbot></app-chatbot>
 </div>

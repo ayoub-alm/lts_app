@@ -7,6 +7,9 @@ export interface Formation {
   subtitle: string;
   image: string;
   presentation: string;
+  duration?: string;
+  mode?: string;
+  certification?: string;
   program: Array<{ title: string; description: string }>;
   opportunities: string[];
 }

@@ -1,32 +1,70 @@
-<footer class="bg-dark text-white py-5 mt-auto">
+<footer class="footer-section">
   <div class="container">
-    <div class="row gy-4">
-      <div class="col-lg-5 col-md-12">
+    <div class="row">
+      <!-- Column 1: Brand & Bio -->
+      <div class="col-lg-4 mb-4 footer-column">
         <div class="d-flex align-items-center mb-3">
-            <img src="assets/ltsAcademy.png" alt="LTS Academy" width="50" height="50" class="me-3 bg-white rounded-circle p-1">
-            <h5 class="text-uppercase text-primary mb-0 fw-bold">LTS ACADEMY</h5>
+          <img src="assets/lts.png" alt="LTS" class="footer-logo" onerror="this.src='assets/ltsAcademy.png'">
+          <span class="h5 m-0 text-dark fw-medium">LTS Academy</span>
         </div>
-        <p class="text-white-50">Votre avenir professionnel commence ici. Une formation d'excellence pour des carrières d'avenir.</p>
+        <p class="footer-bio">
+          Centre de formation professionnelle d'excellence dédié à l'insertion et au développement des compétences clés du marché de l'emploi au Maroc.
+        </p>
+        <div class="d-flex gap-3 mt-3">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
       </div>
-      <div class="col-lg-3 col-md-6">
-        <h5 class="text-uppercase mb-3 text-white fw-bold">Navigation</h5>
+
+      <!-- Column 2: Formations -->
+      <div class="col-lg-2 col-6 mb-4 footer-column">
+        <h5>Formations</h5>
         <ul class="list-unstyled">
-          <li class="mb-2"><a routerLink="/" class="text-white-50 text-decoration-none hover-white">Accueil</a></li>
-          <li class="mb-2"><a routerLink="/poles" class="text-white-50 text-decoration-none hover-white">Formations</a></li>
-          <li class="mb-2"><a routerLink="/impact" class="text-white-50 text-decoration-none hover-white">Étude d'Impact</a></li>
+          <li><a routerLink="/formations/marketing">Marketing Digital</a></li>
+          <li><a routerLink="/formations/rh">Ressources Humaines</a></li>
+          <li><a routerLink="/formations/logistique">Logistique & Transport</a></li>
+          <li><a routerLink="/formations/web-development">Développement Web</a></li>
+          <li><a routerLink="/formations/big-data">Big Data & IA</a></li>
+          <li><a routerLink="/formations/design">Infographie & Design</a></li>
+          <li><a routerLink="/formations/finance">Comptabilité & Finance</a></li>
+          <li><a routerLink="/formations/qhse">QHSE</a></li>
+          <li><a routerLink="/poles" class="text-primary fw-medium">Voir toutes →</a></li>
         </ul>
       </div>
-      <div class="col-lg-4 col-md-6">
-        <h5 class="text-uppercase mb-3 text-white fw-bold">Contact</h5>
-        <ul class="list-unstyled text-white-50">
-          <li class="mb-2 d-flex align-items-center"><mat-icon class="me-2 fs-5">phone</mat-icon> 0660-356877</li>
-          <li class="mb-2 d-flex align-items-center"><mat-icon class="me-2 fs-5">email</mat-icon> contact@ltsacademy.ma</li>
-          <li class="d-flex align-items-center"><mat-icon class="me-2 fs-5">location_on</mat-icon> Berrechid, Maroc</li>
+
+      <!-- Column 3: L'Académie -->
+      <div class="col-lg-2 col-6 mb-4 footer-column">
+        <h5>L'Académie</h5>
+        <ul class="list-unstyled">
+          <li><a routerLink="/">Accueil</a></li>
+          <li><a routerLink="/poles">Nos Pôles</a></li>
+          <li><a routerLink="/impact">Étude d'Impact</a></li>
+          <li><a routerLink="/impact-environnement">Impact Environnement</a></li>
+          <li><a routerLink="/" fragment="contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact -->
+      <div class="col-lg-4 mb-4 footer-column">
+        <h5>Contact</h5>
+        <ul class="list-unstyled contact-list">
+          <li class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i> Berrechid, Maroc</li>
+          <li class="mb-2"><i class="bi bi-envelope me-2 text-primary"></i> contact&#64;ltsacademy.com</li>
+          <li class="mb-2"><i class="bi bi-telephone me-2 text-primary"></i> +212 661 732 848</li>
+          <li class="mb-2"><i class="bi bi-clock me-2 text-primary"></i> Lun - Sam: 09:00 - 18:00</li>
         </ul>
       </div>
     </div>
-    <div class="border-top border-secondary pt-4 mt-4 text-center text-white-50 small">
-      © 2025 LTS Academy. Tous droits réservés. Designed with <mat-icon class="fs-6 align-middle text-danger">favorite</mat-icon> by Jules.
+
+    <div class="footer-bottom text-center">
+      <p class="mb-0 text-muted">&copy; 2025 LTS Academy. Tous droits réservés.</p>
     </div>
   </div>
 </footer>

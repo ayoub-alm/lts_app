@@ -1,0 +1,35 @@
+// ─── WhatsApp Floating Button ─────────────────────────────────────────────────
+// (ported from ui-ux-enhancement branch css/style.css)
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #25d366;
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.14), 0 1px 18px rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1030;
+  text-decoration: none;
+
+  i,
+  mat-icon {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    line-height: 1;
+  }
+
+  &:hover {
+    transform: scale(1.12);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.35);
+    color: white;
+  }
+
+  &:active { transform: scale(0.97); }
+}

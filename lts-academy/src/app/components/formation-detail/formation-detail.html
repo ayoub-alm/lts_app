@@ -1,84 +1,102 @@
 <div *ngIf="formation; else notFound">
-  <header class="text-white position-relative" style="min-height: 60vh;">
-    <div class="position-absolute top-0 start-0 w-100 h-100" [style.background]="'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(' + formation.image + ') center/cover no-repeat'"></div>
-    <div class="container h-100 position-relative d-flex align-items-center" style="min-height: 60vh;">
-      <div class="bg-blur p-5 rounded-3" style="backdrop-filter: blur(10px); background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.2);">
-        <h1 class="display-3 fw-bold mb-3">{{ formation.title }}</h1>
-        <p class="lead mb-4 fs-3">{{ formation.subtitle }}</p>
-        <a href="#programme" mat-raised-button color="accent" class="fs-5 px-4 py-2" style="border-radius: 50px;">Voir le programme</a>
+  <!-- ═══════════════════  HERO SECTION (GOOGLE MD3 STYLE)  ═══════════════════ -->
+  <header class="hero-section text-center">
+    <div class="container">
+      <div class="mb-3">
+        <a routerLink="/poles" class="text-secondary small text-decoration-none">
+          <i class="bi bi-arrow-left me-1"></i> Toutes les formations
+        </a>
+      </div>
+      <h1 class="hero-title mb-3">{{ formation.title }}</h1>
+      <p class="hero-subtitle mb-4">{{ formation.subtitle }}</p>
+      <div class="d-flex justify-content-center gap-2 flex-wrap text-secondary">
+        <span class="badge-modern" *ngIf="formation.duration">
+          <i class="bi bi-clock text-primary"></i> {{ formation.duration }}
+        </span>
+        <span class="badge-modern" *ngIf="formation.mode">
+          <i class="bi bi-geo-alt text-success"></i> {{ formation.mode }}
+        </span>
+        <span class="badge-modern" *ngIf="formation.certification">
+          <i class="bi bi-award text-warning"></i> {{ formation.certification }}
+        </span>
       </div>
     </div>
   </header>
 
-  <div class="container py-5">
+  <!-- ═══════════════════  CONTENT & SIDEBAR  ═══════════════════ -->
+  <section class="container my-5">
     <div class="row g-5">
+      <!-- Main Content -->
       <div class="col-lg-8">
-        <section class="mb-5">
-          <h2 class="text-primary fw-bold mb-4">Présentation</h2>
-          <p class="lead text-muted">{{ formation.presentation }}</p>
-        </section>
+        <!-- À propos -->
+        <div class="mb-4 p-4 rounded-4 bg-white border shadow-sm">
+          <h2 class="h4 mb-3 text-primary fw-medium">À propos de la formation</h2>
+          <p class="text-secondary mb-0 fs-5 lh-base">{{ formation.presentation }}</p>
+        </div>
 
-        <section id="programme" class="mb-5" *ngIf="formation.program && formation.program.length > 0">
-          <h2 class="text-primary fw-bold mb-4">Programme de la Formation</h2>
-          <div class="row g-4">
-            <div class="col-md-6" *ngFor="let module of formation.program">
-              <mat-card class="h-100 shadow-sm border-0 bg-light">
-                <mat-card-header>
-                  <mat-card-title class="fs-5 fw-bold text-dark mb-2">
-                    <mat-icon class="align-middle me-2 text-primary">check_circle</mat-icon>
-                    {{ module.title }}
-                  </mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                  <p class="mb-0 text-muted">{{ module.description }}</p>
-                </mat-card-content>
-              </mat-card>
-            </div>
+        <!-- Programme -->
+        <div class="mb-4 p-4 rounded-4 bg-white border shadow-sm" *ngIf="formation.program && formation.program.length > 0">
+          <h2 class="h4 mb-3 text-primary fw-medium">Programme de la formation</h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-transparent border-0 ps-0 py-3 d-flex align-items-start" *ngFor="let item of formation.program">
+              <i class="bi bi-check2-circle text-success me-3 fs-4 mt-1"></i>
+              <div>
+                <strong class="text-dark fs-6 d-block mb-1">{{ item.title }}</strong>
+                <span class="text-secondary">{{ item.description }}</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Débouchés Professionnels -->
+        <div class="mb-4 p-4 rounded-4 bg-white border shadow-sm" *ngIf="formation.opportunities && formation.opportunities.length > 0">
+          <h2 class="h4 mb-3 text-primary fw-medium">Débouchés Professionnels</h2>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill bg-light text-dark border p-2 px-3 fw-normal fs-6" *ngFor="let opp of formation.opportunities">
+              <i class="bi bi-briefcase me-1 text-secondary"></i> {{ opp }}
+            </span>
           </div>
-        </section>
+        </div>
       </div>
 
+      <!-- Sidebar Sticky Card -->
       <div class="col-lg-4">
-        <div class="sticky-top" style="top: 80px; z-index: 1;">
-          <mat-card class="mb-4 shadow-sm border-0">
-            <mat-card-header class="bg-primary text-white p-3 rounded-top">
-              <mat-card-title class="mb-0 fs-5">Débouchés Professionnels</mat-card-title>
-            </mat-card-header>
-            <mat-card-content class="p-0">
-              <mat-list>
-                <mat-list-item *ngFor="let opp of formation.opportunities">
-                  <mat-icon matListItemIcon class="text-success">work</mat-icon>
-                  <div matListItemTitle>{{ opp }}</div>
-                </mat-list-item>
-                <mat-list-item *ngIf="!formation.opportunities || formation.opportunities.length === 0">
-                  <div matListItemTitle class="text-muted fst-italic">Opportunités variées</div>
-                </mat-list-item>
-              </mat-list>
-            </mat-card-content>
-          </mat-card>
-
-          <mat-card class="shadow-sm border-0 bg-secondary text-white">
-            <mat-card-content class="p-4 text-center">
-              <h3 class="fw-bold mb-3">Intéressé(e) ?</h3>
-              <p>Inscrivez-vous dès maintenant ou demandez plus d'informations.</p>
-              <a routerLink="/" fragment="contact" mat-raised-button color="primary" class="w-100 mb-2">S'inscrire</a>
-              <a href="https://wa.me/212660356877" mat-stroked-button class="w-100 text-white border-white">
-                <mat-icon class="align-middle me-2">chat</mat-icon> WhatsApp
+        <div class="sticky-sidebar card border shadow-sm" style="border-radius: 24px; overflow: hidden;">
+          <div [style.backgroundImage]="'url(' + formation.image + ')'" class="sidebar-img"></div>
+          <div class="card-body p-4 bg-white">
+            <h4 class="card-title mb-4 fw-medium text-dark">Inscrivez-vous</h4>
+            <ul class="list-unstyled mb-4 text-secondary">
+              <li class="mb-3 d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i> Formation certifiante
+              </li>
+              <li class="mb-3 d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i> Formateurs experts terrain
+              </li>
+              <li class="mb-3 d-flex align-items-center">
+                <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i> Accompagnement carrière & stage
+              </li>
+            </ul>
+            <div class="d-grid gap-2">
+              <a routerLink="/" fragment="contact" class="btn btn-primary-custom justify-content-center">
+                Postuler maintenant <i class="bi bi-arrow-right ms-1"></i>
               </a>
-            </mat-card-content>
-          </mat-card>
+              <a href="https://wa.me/212661732848" target="_blank" class="btn btn-outline-pill text-center">
+                <i class="bi bi-whatsapp text-success me-1"></i> Discuter sur WhatsApp
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 
 <ng-template #notFound>
-  <div class="container py-5 text-center" style="min-height: 60vh; display: flex; flex-direction: column; justify-content: center;">
+  <div class="container py-5 text-center" style="min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
     <h1 class="display-1 fw-bold text-muted">404</h1>
     <p class="lead mb-4">Formation introuvable.</p>
-    <div>
-      <a routerLink="/poles" mat-raised-button color="primary">Retour aux formations</a>
-    </div>
+    <a routerLink="/poles" class="btn btn-primary-custom">
+      Retour aux formations
+    </a>
   </div>
 </ng-template>

@@ -1,0 +1,167 @@
+<!-- Language Level Detector Section -->
+<section class="language-detector-section py-5">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5 reveal">
+      <div class="section-badge mb-3">
+        <mat-icon>psychology</mat-icon>
+        <span>Intelligence Artificielle</span>
+      </div>
+      <h2 class="display-5 fw-bold">Évaluez votre niveau de langue</h2>
+      <p class="lead text-muted col-lg-7 mx-auto">
+        Notre IA analyse votre texte et détermine votre niveau selon le
+        <strong>Cadre Européen Commun de Référence (CECR)</strong> — instantanément et gratuitement.
+      </p>
+    </div>
+
+    <div class="detector-card shadow-lg">
+
+      <!-- Language Selector Tabs -->
+      <div class="lang-tabs">
+        <button *ngFor="let lang of languages"
+          class="lang-tab"
+          [class.active]="selectedLanguage.code === lang.code"
+          (click)="onLanguageChange(lang)">
+          <span class="flag">{{ lang.flag }}</span>
+          <span class="lang-name">{{ lang.label }}</span>
+        </button>
+      </div>
+
+      <!-- Input Area -->
+      <div class="detector-body">
+        <div class="input-side">
+          <label class="input-label">
+            <mat-icon>edit</mat-icon>
+            Votre texte en {{ selectedLanguage.label }} {{ selectedLanguage.flag }}
+          </label>
+          <textarea
+            [(ngModel)]="userText"
+            [placeholder]="currentPlaceholder"
+            rows="6"
+            class="text-input"
+            [disabled]="isAnalyzing">
+          </textarea>
+          <div class="input-footer">
+            <span class="char-count">{{ userText.length }} caractères</span>
+            <div class="action-btns">
+              <button class="btn-reset" (click)="reset()" *ngIf="userText || result">
+                <mat-icon>refresh</mat-icon> Réinitialiser
+              </button>
+              <button class="btn-analyze"
+                (click)="analyze()"
+                [disabled]="!userText.trim() || isAnalyzing || userText.trim().length < 10">
+                <span *ngIf="!isAnalyzing">
+                  <mat-icon>psychology</mat-icon> Analyser
+                </span>
+                <span *ngIf="isAnalyzing" class="analyzing-text">
+                  <span class="dot-flashing"></span> Analyse en cours…
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result Panel -->
+        <div class="result-side" [class.has-result]="result">
+
+          <!-- Placeholder (no result yet) -->
+          <div class="result-placeholder" *ngIf="!result && !isAnalyzing && !error">
+            <mat-icon class="placeholder-icon">insights</mat-icon>
+            <p>Votre analyse apparaîtra ici</p>
+            <small>Écrivez au moins 2-3 phrases puis cliquez sur <strong>Analyser</strong></small>
+          </div>
+
+          <!-- Loading state -->
+          <div class="result-loading" *ngIf="isAnalyzing">
+            <div class="ai-loader">
+              <div class="ai-pulse"></div>
+              <div class="ai-pulse delay-1"></div>
+              <div class="ai-pulse delay-2"></div>
+            </div>
+            <p>L'IA analyse votre texte…</p>
+          </div>
+
+          <!-- Error -->
+          <div class="result-error" *ngIf="error && !isAnalyzing">
+            <mat-icon>error_outline</mat-icon>
+            <p>{{ error }}</p>
+          </div>
+
+          <!-- Results -->
+          <div class="result-content" *ngIf="result && !isAnalyzing">
+
+            <!-- Level Badge -->
+            <div class="level-badge-row">
+              <div class="level-badge" [style.background]="levelInfo?.color">
+                <mat-icon>{{ levelInfo?.icon }}</mat-icon>
+                <div>
+                  <div class="level-code">{{ result.level }}</div>
+                  <div class="level-desc">{{ levelInfo?.description }}</div>
+                </div>
+              </div>
+              <div class="score-display">
+                <div class="score-number">{{ result.score }}</div>
+                <div class="score-label">/ 100</div>
+              </div>
+            </div>
+
+            <!-- CEFR Progress Bar -->
+            <div class="cefr-progress">
+              <div class="cefr-levels">
+                <div *ngFor="let lvl of getCefrLevels()"
+                  class="cefr-step"
+                  [class.active]="result.level === lvl"
+                  [class.passed]="isCurrentOrPastLevel(lvl)">
+                  <div class="cefr-dot"></div>
+                  <div class="cefr-label">{{ lvl }}</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Score bar -->
+            <div class="score-bar-wrap">
+              <div class="score-bar">
+                <div class="score-fill" [style.width]="scoreWidth" [style.background]="levelInfo?.color"></div>
+              </div>
+            </div>
+
+            <!-- Analysis -->
+            <div class="analysis-block">
+              <h6><mat-icon>analytics</mat-icon> Analyse</h6>
+              <p>{{ result.analysis }}</p>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="recommendations-block" *ngIf="result.recommendations?.length">
+              <h6><mat-icon>tips_and_updates</mat-icon> Recommandations</h6>
+              <ul>
+                <li *ngFor="let rec of result.recommendations">
+                  <mat-icon>arrow_right</mat-icon>{{ rec }}
+                </li>
+              </ul>
+            </div>
+
+            <!-- Course Recommendation -->
+            <div class="course-cta" *ngIf="result.course_recommendation">
+              <mat-icon>school</mat-icon>
+              <div>
+                <strong>Formation recommandée :</strong>
+                <p>{{ result.course_recommendation }}</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info chips -->
+    <div class="info-chips text-center mt-4">
+      <span class="info-chip"><mat-icon>lock</mat-icon> Analyse privée</span>
+      <span class="info-chip"><mat-icon>bolt</mat-icon> Résultat instantané</span>
+      <span class="info-chip"><mat-icon>smart_toy</mat-icon> Gemini AI + LangChain</span>
+      <span class="info-chip"><mat-icon>check_circle</mat-icon> Gratuit</span>
+    </div>
+  </div>
+</section>

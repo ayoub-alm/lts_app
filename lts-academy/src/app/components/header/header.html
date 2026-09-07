@@ -1,32 +1,127 @@
-<mat-toolbar color="primary" class="fixed-top shadow-sm">
-  <a routerLink="/" class="d-flex align-items-center text-white text-decoration-none me-4">
-    <img src="assets/ltsAcademy.png" alt="LTS Academy" width="40" height="40" class="me-2 bg-white rounded-circle p-1">
-    <span class="fw-bold d-none d-sm-block">LTS ACADEMY</span>
-  </a>
+<!-- ═══════════════════  MODERN GOOGLE NAVBAR  ═══════════════════ -->
+<header class="site-header" [class.scrolled]="scrolled()">
+  <nav class="header-inner" role="navigation" aria-label="Navigation principale">
 
-  <span class="spacer"></span>
+    <!-- Brand -->
+    <a href="/" (click)="navigateToHome($event)" class="navbar-brand" aria-label="LTS Academy accueil">
+      <img src="assets/lts.png" alt="LTS Logo" class="brand-logo" onerror="this.src='assets/ltsAcademy.png'">
+      <span class="brand-name">LTS Academy</span>
+    </a>
 
-  <div class="d-none d-md-flex align-items-center gap-2">
-    <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
-    <button mat-button [matMenuTriggerFor]="formationsMenu">Formations <mat-icon>expand_more</mat-icon></button>
-    <mat-menu #formationsMenu="matMenu">
-      <a mat-menu-item routerLink="/formations/paramedical">Paramédical</a>
-      <a mat-menu-item routerLink="/formations/web-development">Développement Web</a>
-      <a mat-menu-item routerLink="/formations/mecanique">Génie Mécanique</a>
-      <a mat-menu-item routerLink="/formations/qhse">QHSE</a>
-      <a mat-menu-item routerLink="/poles">Toutes les formations</a>
-    </mat-menu>
-    <a mat-button routerLink="/impact" routerLinkActive="active">Étude d’Impact</a>
-    <a mat-raised-button color="accent" routerLink="/" fragment="contact" class="ms-2">Contact</a>
+    <!-- ── Desktop Navigation ── -->
+    <div class="desktop-nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="navigateToHome($event)" class="nav-link">
+        Accueil
+      </a>
+
+      <a href="/poles" class="nav-link">
+        Nos Pôles
+      </a>
+
+      <!-- ── Formations Dropdown (Hover + Click) ── -->
+      <div class="nav-dropdown-wrap" (mouseenter)="openDropdown()" (mouseleave)="closeDropdown()">
+        <button class="nav-link has-dropdown" type="button"
+                (click)="toggleDropdown($event)"
+                [class.active]="dropdownOpen()">
+          Formations
+          <i class="bi bi-chevron-down drop-arrow" [class.rotated]="dropdownOpen()"></i>
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div class="dropdown-menu-custom" [class.show]="dropdownOpen()">
+          <a *ngFor="let f of formations"
+             [routerLink]="f.path"
+             class="dropdown-item-custom"
+             (click)="closeDropdown(); closeMobile()">
+            <i class="bi {{ f.icon }} item-icon"></i>
+            <span>{{ f.label }}</span>
+          </a>
+          <div class="dropdown-divider-custom"></div>
+          <a routerLink="/poles" class="dropdown-item-custom text-primary fw-medium"
+             (click)="closeDropdown(); closeMobile()">
+            <i class="bi bi-grid item-icon"></i>
+            <span>Voir toutes les formations &rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="/impact" class="nav-link">
+        Étude d'Impact
+      </a>
+
+      <a href="/impact-environnement" class="nav-link">
+        Impact Environnement
+      </a>
+
+      <a href="#contact" (click)="navigateToContact($event)" class="nav-link">
+        Contact
+      </a>
+
+      <a href="#contact" (click)="navigateToContact($event)" class="btn btn-primary-custom ms-2 text-white">
+        S'inscrire
+      </a>
+    </div>
+
+    <!-- ── Mobile Hamburger ── -->
+    <button class="hamburger-btn" type="button"
+            (click)="toggleMobile()"
+            [class.is-open]="mobileOpen()"
+            aria-label="Ouvrir le menu"
+            [attr.aria-expanded]="mobileOpen()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ═══════════════════  MOBILE DRAWER  ═══════════════════ -->
+<div class="drawer-overlay" [class.visible]="mobileOpen()" (click)="closeMobile()" aria-hidden="true"></div>
+
+<aside class="mobile-drawer" [class.open]="mobileOpen()" role="complementary" aria-label="Menu mobile">
+  <div class="drawer-header">
+    <a href="/" (click)="navigateToHome($event)" class="navbar-brand">
+      <img src="assets/lts.png" alt="LTS Logo" class="brand-logo" onerror="this.src='assets/ltsAcademy.png'">
+      <span class="brand-name">LTS Academy</span>
+    </a>
+    <button class="drawer-close-btn" type="button" (click)="closeMobile()" aria-label="Fermer">
+      <i class="bi bi-x-lg"></i>
+    </button>
   </div>
 
-  <button mat-icon-button [matMenuTriggerFor]="mobileMenu" class="d-md-none text-white">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <mat-menu #mobileMenu="matMenu">
-    <a mat-menu-item routerLink="/">Accueil</a>
-    <a mat-menu-item routerLink="/poles">Formations</a>
-    <a mat-menu-item routerLink="/impact">Étude d’Impact</a>
-    <a mat-menu-item routerLink="/" fragment="contact">Contact</a>
-  </mat-menu>
-</mat-toolbar>
+  <div class="drawer-body">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="drawer-link" (click)="navigateToHome($event)">
+      <i class="bi bi-house me-2"></i> Accueil
+    </a>
+
+    <a routerLink="/poles" routerLinkActive="active" class="drawer-link" (click)="closeMobile()">
+      <i class="bi bi-grid me-2"></i> Nos Pôles
+    </a>
+
+    <div class="drawer-section-title">Formations</div>
+
+    <a *ngFor="let f of formations" [routerLink]="f.path" routerLinkActive="active" class="drawer-link drawer-sub-link" (click)="closeMobile()">
+      <i class="bi {{ f.icon }} me-2 text-primary"></i> {{ f.label }}
+    </a>
+
+    <a routerLink="/poles" class="drawer-link drawer-sub-link text-primary fw-medium" (click)="closeMobile()">
+      <i class="bi bi-arrow-right-circle me-2"></i> Toutes les formations
+    </a>
+
+    <a routerLink="/impact" routerLinkActive="active" class="drawer-link" (click)="closeMobile()">
+      <i class="bi bi-graph-up-arrow me-2"></i> Étude d'Impact
+    </a>
+
+    <a routerLink="/impact-environnement" routerLinkActive="active" class="drawer-link" (click)="closeMobile()">
+      <i class="bi bi-globe-americas me-2"></i> Impact Environnement
+    </a>
+
+    <a href="#contact" (click)="navigateToContact($event)" class="drawer-link">
+      <i class="bi bi-envelope me-2"></i> Contact
+    </a>
+
+    <div class="mt-4 px-3">
+      <a href="#contact" (click)="navigateToContact($event)" class="btn btn-primary-custom w-100 justify-content-center">
+        S'inscrire
+      </a>
+    </div>
+  </div>
+</aside>

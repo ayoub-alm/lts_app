@@ -1,0 +1,100 @@
+// ─── Hero Section ────────────────────────────────────────────────────────────
+.hero-section {
+  padding: 60px 0 40px;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 40px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: -0.8px;
+  color: var(--color-text-primary);
+  margin-bottom: 0.75rem;
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+// ─── Metric Cards ────────────────────────────────────────────────────────────
+.metric-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.metric-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+// ─── Engagement Cards ────────────────────────────────────────────────────────
+.engagement-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+  }
+}
+
+.engagement-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+// ─── Pillar Icon ─────────────────────────────────────────────────────────────
+.pillar-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+// ─── CTA Box ─────────────────────────────────────────────────────────────────
+.cta-box {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  border-left: 5px solid #34a853;
+}

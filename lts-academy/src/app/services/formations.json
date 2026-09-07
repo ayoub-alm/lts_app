@@ -1,199 +1,290 @@
 [
   {
-    "id": "rh",
-    "title": "Ressources Humaines",
-    "subtitle": "Gérez le capital humain et développez les talents.",
-    "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80",
-    "presentation": "Apprenez à gérer le recrutement, la paie, la formation et les relations sociales au sein de l'entreprise.",
-    "program": [],
-    "opportunities": []
-  },
-  {
     "id": "marketing",
     "title": "Marketing Digital",
     "subtitle": "Devenez un expert en stratégie digitale et communication web.",
-    "image": "https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    "image": "https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "duration": "6 mois",
+    "mode": "Hybride (Présentiel/Distanciel)",
+    "certification": "Certificat Professionnel",
     "presentation": "Cette formation vous permet de maîtriser les outils du webmarketing, du SEO aux réseaux sociaux, pour booster la visibilité et les ventes d'une entreprise.",
-    "program": [],
-    "opportunities": []
-  },
-  {
-    "id": "mecanique",
-    "title": "Génie Mécanique",
-    "subtitle": "Concevez et maintenez les systèmes mécaniques de demain.",
-    "image": "https://ft.univ-tlemcen.dz/assets/uploads/_Images/D%C3%A9partements/mechanic_unsa_arequipa_peru_02-878x426.jpg",
-    "presentation": "Le génie mécanique est au cœur de l'industrie moderne. Notre formation couvre la conception, la fabrication et la maintenance des systèmes mécaniques.\n            Vous apprendrez à utiliser des logiciels de CAO/DAO, à comprendre les matériaux et à gérer des projets industriels.",
     "program": [
-      {
-        "title": "Conception (CAO)",
-        "description": "Maîtrise de SolidWorks, AutoCAD et Catia pour la modélisation 3D."
-      },
-      {
-        "title": "Maintenance Industrielle",
-        "description": "Diagnostic de pannes, maintenance préventive et corrective."
-      },
-      {
-        "title": "Automatisme",
-        "description": "Programmation d'automates et pilotage de systèmes robotisés."
-      }
+      { "title": "Stratégie Digitale", "description": "Fondamentaux du marketing mix numérique et définition d'objectifs ROIstes." },
+      { "title": "SEO / SEA", "description": "Référencement naturel Google et campagnes sponsorisées Google Ads." },
+      { "title": "Community Management", "description": "Animation des réseaux sociaux, création de contenu engageant et modération." },
+      { "title": "Publicité en ligne (Social Ads)", "description": "Campagnes publicitaires ciblées sur Meta (Facebook/Instagram), LinkedIn et TikTok." },
+      { "title": "Analyse de données & Reporting", "description": "Google Analytics 4, KPI de conversion et pilotage de la performance." }
     ],
     "opportunities": [
-      "Technicien Bureau d'Études",
-      "Responsable Maintenance",
-      "Opérateur Commande Numérique",
-      "Dessinateur Industriel"
+      "Chef de projet digital",
+      "Community Manager",
+      "Consultant SEO",
+      "Traffic Manager",
+      "Responsable Webmarketing"
     ]
   },
   {
-    "id": "design",
-    "title": "Infographie et Design",
-    "subtitle": "Exprimez votre créativité à travers le design graphique.",
-    "image": "https://images.unsplash.com/photo-1626785774573-4b799312c95d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    "presentation": "Maîtrisez la suite Adobe (Photoshop, Illustrator, InDesign) et les principes du design pour créer des visuels percutants.",
-    "program": [],
-    "opportunities": []
-  },
-  {
-    "id": "paramedical",
-    "title": "Formation Paramédicale",
-    "subtitle": "Devenez un professionnel de santé compétent et qualifié.",
-    "image": "https://lafactory.ma/wp-content/uploads/2020/05/Paramedical-1024x768.jpeg",
-    "presentation": "Le secteur paramédical est en pleine expansion et offre de nombreuses opportunités de carrière.\n                Notre formation vous prépare aux métiers d'aide-soignant, d'infirmier auxiliaire, et d'autres spécialités paramédicales.\n                Vous acquerrez les connaissances théoriques et les compétences pratiques nécessaires pour exceller dans ce domaine exigeant et humain.",
+    "id": "rh",
+    "title": "Ressources Humaines",
+    "subtitle": "Gestion du personnel, recrutement et développement des talents.",
+    "image": "https://images.unsplash.com/photo-1521791136064-7985c2d11f99?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "duration": "9 mois",
+    "mode": "Présentiel & Distanciel",
+    "certification": "Diplôme Agréé",
+    "presentation": "Apprenez à gérer le recrutement, la paie, la formation et les relations sociales au sein de l'entreprise avec une approche moderne et agile.",
     "program": [
-      {
-        "title": "Soins Infirmiers",
-        "description": "Techniques de soins de base, hygiène, et confort du patient."
-      },
-      {
-        "title": "Anatomie & Physiologie",
-        "description": "Compréhension du corps humain et de ses fonctions vitales."
-      },
-      {
-        "title": "Secourisme",
-        "description": "Gestes de premiers secours et gestion des urgences médicales."
-      },
-      {
-        "title": "Relation Patient",
-        "description": "Psychologie du malade, communication et éthique professionnelle."
-      }
+      { "title": "Droit du travail & Législation", "description": "Cadre juridique marocain, contrats de travail et réglementation sociale." },
+      { "title": "Gestion de la paie & Administration", "description": "Éléments de paie, déclarations CNSS/IR et gestion des congés." },
+      { "title": "Recrutement & Marque Employeur", "description": "Sourcing de candidats, techniques d'entretien et intégration." },
+      { "title": "Communication interne & Climat social", "description": "Relations collectives, animation des réunions et fidélisation." },
+      { "title": "GPEC & Gestion des carrières", "description": "Planification prévisionnelle des compétences et plans de formation." }
     ],
     "opportunities": [
-      "Hôpitaux Publics & Privés",
-      "Cliniques",
-      "Cabinets Médicaux",
-      "Centres de Soins"
+      "Assistant RH",
+      "Chargé de recrutement",
+      "Gestionnaire de paie",
+      "Responsable formation",
+      "Coordinateur RH"
     ]
-  },
-  {
-    "id": "finance",
-    "title": "Comptabilité et Finance",
-    "subtitle": "Maîtrisez les chiffres clés de l'entreprise.",
-    "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    "presentation": "Une formation complète pour devenir autonome en comptabilité générale, analytique et en gestion financière.",
-    "program": [],
-    "opportunities": []
-  },
-  {
-    "id": "web-development",
-    "title": "Développement Web Full-Stack",
-    "subtitle": "Maîtrisez les technologies du web et créez des sites modernes et performants.",
-    "image": "https://ccsav.ca/wp-content/uploads/2022/11/metier-developpeur-web-1.jpg",
-    "presentation": "Le métier de développeur web est l'un des plus recherchés aujourd'hui. Cette formation intensive vous permet d'acquérir\n                toutes les compétences nécessaires pour concevoir et développer des sites web dynamiques, des applications web et des interfaces utilisateurs modernes.\n                Que vous soyez débutant ou que vous souhaitiez vous perfectionner, notre programme s'adapte à votre niveau.",
-    "program": [
-      {
-        "title": "Front-End",
-        "description": "HTML5, CSS3, JavaScript, React/Vue.js pour créer des interfaces interactives."
-      },
-      {
-        "title": "Back-End",
-        "description": "Node.js, PHP, Python, et gestion des bases de données (SQL/NoSQL)."
-      },
-      {
-        "title": "Outils & DevOps",
-        "description": "Git, Docker, déploiement sur le cloud et méthodologies Agiles."
-      }
-    ],
-    "opportunities": [
-      "Développeur Front-End",
-      "Développeur Back-End",
-      "Développeur Full-Stack",
-      "Freelance / Entrepreneur"
-    ]
-  },
-  {
-    "id": "langues",
-    "title": "Formations en Langues",
-    "subtitle": "Communiquez sans frontières et boostez votre employabilité.",
-    "image": "https://www.ipac-traductions.com/wp-content/uploads/2021/05/langues-les-plus-parlees-1080x675-1.jpg",
-    "presentation": "Que ce soit pour voyager, travailler à l'étranger ou simplement enrichir votre culture personnelle,\n            la maîtrise d'une ou plusieurs langues étrangères est un atout majeur. Nos cours sont dispensés par des formateurs expérimentés\n            et basés sur la pratique orale et écrite.",
-    "program": [
-      {
-        "title": "Anglais",
-        "description": "Business English, préparation au TOEFL/IELTS ou anglais général."
-      },
-      {
-        "title": "Français",
-        "description": "Perfectionnement, communication professionnelle et préparation au DELF/DALF."
-      },
-      {
-        "title": "Allemand",
-        "description": "Apprentissage de la langue de Goethe pour les études ou le travail en Allemagne."
-      }
-    ],
-    "opportunities": []
-  },
-  {
-    "id": "systemes-reseaux",
-    "title": "Systèmes et Réseaux",
-    "subtitle": "Assurez la connectivité et la sécurité des infrastructures.",
-    "image": "https://images.unsplash.com/photo-1558494949-ef526b0042a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    "presentation": "Formation technique pour installer, configurer et maintenir les réseaux informatiques et les serveurs d'entreprise.",
-    "program": [],
-    "opportunities": []
   },
   {
     "id": "logistique",
-    "title": "Logistique et Transport",
-    "subtitle": "Optimisez la chaîne d'approvisionnement et les flux.",
-    "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    "presentation": "Devenez un acteur clé de la Supply Chain en maîtrisant les processus de transport, stockage et distribution.",
-    "program": [],
-    "opportunities": []
+    "title": "Logistique & Transport",
+    "subtitle": "Optimisez la supply chain et gérez les flux internationaux.",
+    "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "duration": "8 mois",
+    "mode": "Hybride",
+    "certification": "Certificat de Qualification",
+    "presentation": "Devenez un acteur clé de la Supply Chain en maîtrisant les processus de transport, stockage et distribution au niveau national et international.",
+    "program": [
+      { "title": "Gestion des stocks & Entrepôt", "description": "Optimisation des niveaux de stock, méthodes FIFO/LIFO et inventaires." },
+      { "title": "Transport international & Incoterms", "description": "Gestion du fret maritime, aérien et routier, incoterms 2020." },
+      { "title": "Achats et approvisionnements", "description": "Négociation fournisseurs, commandes et suivi logistique amont." },
+      { "title": "Réglementation douanière", "description": "Formalités de dédouanement et procédures import/export au Maroc." },
+      { "title": "Supply Chain Management & ERP", "description": "Outils de traçabilité, planification et utilisation de progiciels logistiques." }
+    ],
+    "opportunities": [
+      "Responsable logistique",
+      "Agent de transit",
+      "Gestionnaire de stock",
+      "Responsable d'entrepôt",
+      "Coordinateur Supply Chain"
+    ]
+  },
+  {
+    "id": "web-development",
+    "title": "Développement Web",
+    "subtitle": "Devenez développeur Full Stack et créez des applications web.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "duration": "6 mois",
+    "mode": "Hybride",
+    "certification": "Certificat Professionnel",
+    "presentation": "Apprenez les langages du web moderne (HTML, CSS, JavaScript, TypeScript) et les frameworks professionnels (Angular, React, Node.js) pour construire des applications dynamiques et performantes.",
+    "program": [
+      { "title": "HTML5 & CSS3 Moderne", "description": "Design responsive, Flexbox, CSS Grid et animations interactives." },
+      { "title": "JavaScript (ES6+) & TypeScript", "description": "Programmation orientée objet, fonctions asynchrones et DOM manipulation." },
+      { "title": "Frameworks Frontend (Angular & React)", "description": "Composants, services, gestion d'état et routage avancé." },
+      { "title": "Back-End & API REST", "description": "Node.js, Express, Python et conception d'architectures d'API." },
+      { "title": "Bases de données & DevOps", "description": "SQL, PostgreSQL, MongoDB, Git et déploiement dans le Cloud." }
+    ],
+    "opportunities": [
+      "Développeur Front-end",
+      "Développeur Back-end",
+      "Développeur Full Stack",
+      "Intégrateur Web",
+      "Développeur Freelance"
+    ]
   },
   {
     "id": "big-data",
     "title": "Big Data et IA",
     "subtitle": "Entrez dans l'ère de la donnée et de l'intelligence artificielle.",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    "presentation": "Apprenez à collecter, traiter et analyser des volumes massifs de données pour en extraire de la valeur.",
-    "program": [],
-    "opportunities": []
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "duration": "12 mois",
+    "mode": "Hybride",
+    "certification": "Master / Expert",
+    "presentation": "Apprenez à collecter, traiter et analyser des volumes massifs de données pour en extraire des insights stratégiques et concevoir des modèles d'intelligence artificielle performants.",
+    "program": [
+      { "title": "Python pour la Data", "description": "Numpy, Pandas, manipulation et nettoyage de données massives." },
+      { "title": "Machine Learning", "description": "Modèles prédictifs supervisés et non-supervisés avec Scikit-Learn." },
+      { "title": "Bases de données NoSQL & Big Data", "description": "MongoDB, Elasticsearch, Hadoop et Apache Spark." },
+      { "title": "Data Visualization & BI", "description": "Tableau, Power BI, conception de tableaux de bord décisionnels." },
+      { "title": "Deep Learning & NLP", "description": "Réseaux neuronaux, traitement automatique du langage naturel." }
+    ],
+    "opportunities": [
+      "Data Analyst",
+      "Data Scientist Junior",
+      "Ingénieur Big Data",
+      "Consultant Business Intelligence",
+      "Développeur IA"
+    ]
+  },
+  {
+    "id": "design",
+    "title": "Infographie et Design",
+    "subtitle": "Exprimez votre créativité à travers le design graphique et multimédia.",
+    "image": "https://images.unsplash.com/photo-1626785774573-4b799312c95d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "duration": "6 mois",
+    "mode": "Présentiel",
+    "certification": "Certificat de Compétence",
+    "presentation": "Maîtrisez la suite Adobe (Photoshop, Illustrator, InDesign) et les principes du design pour créer des identités visuelles percutantes et des supports print et digitaux.",
+    "program": [
+      { "title": "Adobe Photoshop", "description": "Retouche d'image, photomontage et création d'assets visuels professionnels." },
+      { "title": "Adobe Illustrator", "description": "Dessin vectoriel, création de logos et chartes graphiques complètes." },
+      { "title": "Adobe InDesign", "description": "Mise en page éditoriale, catalogues, magazines et brochures d'entreprise." },
+      { "title": "Théorie des couleurs & Typographie", "description": "Harmonies chromatiques, composition visuelle et ergonomie graphique." },
+      { "title": "Identité visuelle & UI Design", "description": "Conception de maquettes d'interfaces web et mobile sous Figma." }
+    ],
+    "opportunities": [
+      "Graphiste",
+      "Infographiste",
+      "Directeur artistique junior",
+      "Maquettiste PAO",
+      "UI Designer"
+    ]
+  },
+  {
+    "id": "finance",
+    "title": "Comptabilité et Finance",
+    "subtitle": "Maîtrisez les chiffres clés et la gestion financière de l'entreprise.",
+    "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "duration": "10 mois",
+    "mode": "Présentiel",
+    "certification": "Diplôme Technicien Spécialisé",
+    "presentation": "Une formation complète et pratique pour devenir autonome en comptabilité générale, fiscale, analytique et en gestion financière d'entreprise.",
+    "program": [
+      { "title": "Comptabilité générale", "description": "Écritures comptables, bilan, compte de résultat et clôture des exercices." },
+      { "title": "Fiscalité des entreprises", "description": "TVA, impôt sur les sociétés (IS), IR et télédéclarations." },
+      { "title": "Contrôle de gestion", "description": "Calcul des coûts de revient, budgets prévisionnels et écarts." },
+      { "title": "Logiciels comptables (Sage)", "description": "Saisie informatisée, gestion commerciale et paie sur Sage." },
+      { "title": "Analyse financière", "description": "Ratios financiers, fonds de roulement, BFR et trésorerie." }
+    ],
+    "opportunities": [
+      "Comptable",
+      "Assistant comptable",
+      "Contrôleur de gestion",
+      "Auditeur junior",
+      "Gestionnaire de trésorerie"
+    ]
+  },
+  {
+    "id": "langues",
+    "title": "Langues Vivantes",
+    "subtitle": "Communiquez sans frontières et boostez votre employabilité internationale.",
+    "image": "https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "duration": "3 à 6 mois",
+    "mode": "Hybride",
+    "certification": "Certificat de Niveau",
+    "presentation": "Cours intensifs et interactifs pour perfectionner votre communication orale et écrite en milieu professionnel et réussir vos entretiens et réunions d'affaires.",
+    "program": [
+      { "title": "Anglais Business", "description": "Négociation commerciale, e-mails professionnels et présentations orales." },
+      { "title": "Français de communication", "description": "Expression écrite soignée, prise de parole en public et aisance relationnelle." },
+      { "title": "Allemand débutant & avancé", "description": "Grammaire, conversation courante et vocabulaire technique ou hôtelier." },
+      { "title": "Préparation certifications", "description": "Entraînement ciblé pour TOEFL, IELTS, DELF/DALF et TOEIC." },
+      { "title": "Ateliers de conversation", "description": "Mises en situation réelles, débats et simulations professionnelles." }
+    ],
+    "opportunities": [
+      "Chargé de clientèle internationale",
+      "Agent en centre de relation client",
+      "Conseiller en tourisme & hôtellerie",
+      "Assistant bilingue",
+      "Traducteur commercial"
+    ]
+  },
+  {
+    "id": "systemes-reseaux",
+    "title": "Systèmes et Réseaux",
+    "subtitle": "Assurez la connectivité, la haute disponibilité et la cybersécurité.",
+    "image": "https://images.unsplash.com/photo-1558494949-ef526b0042a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "duration": "9 mois",
+    "mode": "Présentiel",
+    "certification": "Diplôme Agréé",
+    "presentation": "Formation technique approfondie pour installer, interconnecter, sécuriser et administrer les infrastructures informatiques et serveurs d'entreprise.",
+    "program": [
+      { "title": "Architecture réseaux (Cisco CCNA)", "description": "Routage, commutation VLAN, adressage IPv4/IPv6 et protocoles de routage." },
+      { "title": "Administration Windows Server", "description": "Active Directory, gestion des stratégies de groupe (GPO) et DNS/DHCP." },
+      { "title": "Administration Linux", "description": "Systèmes Debian/Ubuntu/CentOS, scripts Bash et services web." },
+      { "title": "Virtualisation & Cloud", "description": "VMware, Hyper-V, conteneurs Docker et introduction à AWS/Azure." },
+      { "title": "Sécurité des réseaux", "description": "Pare-feu (Firewall), VPN sécurisés, surveillance et plans de sauvegarde." }
+    ],
+    "opportunities": [
+      "Administrateur réseaux",
+      "Technicien support informatique",
+      "Administrateur système",
+      "Technicien déploiement & maintenance",
+      "Consultant infrastructure IT"
+    ]
+  },
+  {
+    "id": "mecanique",
+    "title": "Mécanique Automobile",
+    "subtitle": "Maintenance, diagnostic électronique et réparation automobile moderne.",
+    "image": "https://images.unsplash.com/photo-1486262715619-01b8c2297605?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "duration": "12 mois",
+    "mode": "Présentiel (Atelier pratique)",
+    "certification": "Diplôme Technicien",
+    "presentation": "Formation technique et pratique en atelier pour maîtriser le diagnostic informatisé et la réparation des organes mécaniques et électroniques automobiles.",
+    "program": [
+      { "title": "Moteurs thermiques & Hybrides", "description": "Fonctionnement, démontage, métrologie et réglages des groupes motopropulseurs." },
+      { "title": "Diagnostic électronique automobile", "description": "Utilisation de valises de diagnostic OBD, analyse des codes défauts et capteurs." },
+      { "title": "Systèmes de freinage & Sécurité", "description": "Freinage hydraulique, systèmes ABS, ESP et direction assistée." },
+      { "title": "Transmission & Liaisons au sol", "description": "Boîtes de vitesses manuelles et automatiques, embrayages, amortisseurs." },
+      { "title": "Entretien périodique & Climatisation", "description": "Vidange, filtres, courroies de distribution et circuits frigorifiques." }
+    ],
+    "opportunities": [
+      "Mécanicien automobile qualifié",
+      "Technicien diagnostic automobile",
+      "Chef d'atelier automobile",
+      "Conseiller technique en concession",
+      "Réceptionnaire après-vente"
+    ]
+  },
+  {
+    "id": "paramedical",
+    "title": "Paramédical",
+    "subtitle": "Formez-vous aux métiers de la santé, du soin et de l'aide à la personne.",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "duration": "12 mois",
+    "mode": "Présentiel (Stage clinique inclus)",
+    "certification": "Diplôme d'État",
+    "presentation": "Acquérez les gestes précis et les connaissances humaines pour assister les patients et les praticiens de santé au sein des hôpitaux, cliniques et cabinets.",
+    "program": [
+      { "title": "Soins infirmiers de base", "description": "Prise de constantes vitales, hygiène et confort du patient, pansements." },
+      { "title": "Anatomie & Physiologie humaine", "description": "Structure du corps humain, grandes fonctions vitales et pathologies courantes." },
+      { "title": "Hygiène hospitalière & Asepsie", "description": "Prévention des infections nosocomiales, stérilisation et élimination des déchets." },
+      { "title": "Secourisme & Urgences médicales", "description": "Gestes de premiers secours, réanimation cardio-pulmonaire et défibrillateur." },
+      { "title": "Relation soignant-soigné & Éthique", "description": "Psychologie du patient, écoute active, secret professionnel et déontologie." }
+    ],
+    "opportunities": [
+      "Aide-soignant(e)",
+      "Assistant(e) médical(e)",
+      "Auxiliaire de vie",
+      "Brancardier",
+      "Agent de soins en clinique privée"
+    ]
   },
   {
     "id": "qhse",
-    "title": "Responsable QHSE",
-    "subtitle": "Assurez la Qualité, l'Hygiène, la Sécurité et l'Environnement en entreprise.",
-    "image": "https://www.onisep.fr/var/onisep/storage/images/7/2/2/4/9564227-7-fre-FR/530f0f6cd392-charge-e-hygiene-securite-environnement-HSE.jpg",
-    "presentation": "Le Responsable QHSE a pour mission de définir et mettre en œuvre la politique qualité, hygiène, sécurité et environnement de l'entreprise.\n            Il veille à la conformité réglementaire, prévient les risques professionnels et environnementaux, et améliore la performance globale.\n            Cette formation vous donne les outils pour exceller dans ce poste stratégique.",
+    "title": "QHSE",
+    "subtitle": "Qualité, Hygiène, Sécurité et Environnement industriel.",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "duration": "8 mois",
+    "mode": "Présentiel",
+    "certification": "Diplôme Agréé",
+    "presentation": "Assurez la conformité réglementaire, prévenez les risques au travail et pilotez la démarche d'amélioration continue au sein des entreprises industrielles et de services.",
     "program": [
-      {
-        "title": "Management Qualité",
-        "description": "Maîtrise de la norme ISO 9001 et des outils d'amélioration continue."
-      },
-      {
-        "title": "Sécurité au Travail",
-        "description": "Norme ISO 45001, évaluation des risques professionnels et prévention."
-      },
-      {
-        "title": "Environnement",
-        "description": "Norme ISO 14001, gestion des déchets et développement durable."
-      }
+      { "title": "Normes ISO fondamentales", "description": "ISO 9001 (Qualité), ISO 14001 (Environnement) et ISO 45001 (Santé & Sécurité)." },
+      { "title": "Analyse et évaluation des risques", "description": "Document unique, analyse des postes de travail et méthode AMDEC." },
+      { "title": "Audit interne & Contrôle", "description": "Méthodologie d'audit interne, rapports de non-conformité et actions correctives." },
+      { "title": "Gestion des déchets & Environnement", "description": "Tri, filières de recyclage, bilan carbone et responsabilité sociétale (RSE)." },
+      { "title": "Secourisme du travail & Prévention incendie", "description": "Exercices d'évacuation, extincteurs et ergonomie des postes de travail." }
     ],
     "opportunities": [
       "Responsable QHSE",
-      "Consultant QHSE",
-      "Coordinateur Sécurité",
-      "Auditeur Qualité"
+      "Animateur Santé Sécurité au Travail",
+      "Auditeur Qualité interne",
+      "Consultant HSE junior",
+      "Coordinateur Environnement"
     ]
   }
 ]

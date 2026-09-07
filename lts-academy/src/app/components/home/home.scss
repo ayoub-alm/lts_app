@@ -1,0 +1,108 @@
+// ─── Hero Section (Google Material Design 3 Style) ───────────────────────────
+.hero-section {
+  padding: 80px 0 60px;
+  background-color: var(--color-bg);
+  position: relative;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: -1.2px;
+  color: var(--color-text-primary);
+  margin-bottom: 1.25rem;
+  line-height: 1.15;
+  font-family: var(--font-family);
+
+  @media (max-width: 768px) {
+    font-size: 2.25rem;
+    letter-spacing: -0.5px;
+  }
+}
+
+.hero-highlight {
+  color: var(--color-blue);
+  font-weight: 500;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  max-width: 720px;
+  margin: 0 auto 2.25rem;
+  line-height: 1.6;
+
+  @media (max-width: 768px) {
+    font-size: 1.05rem;
+  }
+}
+
+// ─── Features Cards (Google 3-Card Grid) ────────────────────────────────────
+.feature-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-lg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md) !important;
+    border-color: transparent !important;
+  }
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: 0.65rem;
+}
+
+.feature-text {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+// ─── Intro Box ──────────────────────────────────────────────────────────────
+.intro-box {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  border-left: 5px solid var(--color-blue);
+}
+
+// ─── About Card ─────────────────────────────────────────────────────────────
+.about-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.about-banner-img {
+  max-height: 380px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+// ─── Contact Card ───────────────────────────────────────────────────────────
+.contact-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}

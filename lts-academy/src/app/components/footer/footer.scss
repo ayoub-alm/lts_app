@@ -1,0 +1,75 @@
+.footer-section {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: 60px 0 30px;
+  margin-top: 60px;
+  color: var(--color-text-secondary);
+}
+
+.footer-logo {
+  height: 32px;
+  width: auto;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.footer-bio {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-width: 340px;
+}
+
+.footer-column {
+  h5 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.5px;
+    font-family: var(--font-family);
+  }
+
+  ul li {
+    margin-bottom: 0.75rem;
+
+    a {
+      color: var(--color-text-secondary);
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--color-blue);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.contact-list li {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.social-link {
+  color: var(--color-text-secondary);
+  font-size: 1.25rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+
+  &:hover {
+    color: var(--color-blue);
+    transform: translateY(-2px);
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-border);
+  margin-top: 40px;
+  padding-top: 24px;
+  font-size: 0.85rem;
+}

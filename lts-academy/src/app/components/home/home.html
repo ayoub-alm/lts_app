@@ -1,70 +1,186 @@
-<header class="hero-section text-white d-flex align-items-center" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/contact.jpg') center/cover no-repeat; min-height: 80vh;">
-  <div class="container text-center">
-    <div class="bg-blur p-5 d-inline-block rounded-3" style="backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
-      <h1 class="display-3 fw-bold mb-3">LTS ACADEMY</h1>
-      <p class="lead mb-4 fs-3">Votre avenir professionnel commence ici.</p>
-      <a routerLink="/poles" mat-raised-button color="accent" class="fs-5 px-4 py-2" style="border-radius: 50px;">Découvrir nos formations</a>
+<!-- ═══════════════════  HERO SECTION (MODERN GOOGLE STYLE)  ═══════════════════ -->
+<section class="hero-section d-flex align-items-center justify-content-center">
+  <div class="container hero-content text-center">
+    <h1 class="hero-title">
+      Façonnez votre avenir <br>
+      <span class="hero-highlight">avec excellence</span>
+    </h1>
+    <p class="hero-subtitle">
+      Des formations professionnelles certifiantes conçues pour booster votre carrière.
+      Rejoignez une communauté d'apprenants passionnés et développez les compétences de demain.
+    </p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a routerLink="/poles" class="btn btn-primary-custom">
+        Découvrir nos pôles <i class="bi bi-arrow-right"></i>
+      </a>
+      <a routerLink="/" fragment="contact" class="btn btn-outline-pill">
+        Nous contacter
+      </a>
     </div>
   </div>
-</header>
+</section>
 
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="row g-4 text-center">
-      <div class="col-md-4">
-        <mat-card class="h-100 p-4 border-0 shadow-sm hover-elevate">
-          <mat-icon class="text-primary fs-1 mb-3" style="width: auto; height: auto;">school</mat-icon>
-          <h3 class="fw-bold">Diplômes Reconnus</h3>
-          <p class="text-muted">Des formations certifiantes pour booster votre carrière.</p>
-        </mat-card>
+<!-- ═══════════════════  FEATURES SECTION (3 GOOGLE CARDS)  ═══════════════════ -->
+<section class="container my-5">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="feature-card h-100 p-4 border-0 shadow-sm">
+        <div class="feature-icon text-primary mb-3"><i class="bi bi-award"></i></div>
+        <h4 class="feature-title">Certifications Reconnues</h4>
+        <p class="feature-text">Obtenez des diplômes et certificats d'État valorisés par les employeurs du secteur au Maroc et à l'international.</p>
       </div>
-      <div class="col-md-4">
-        <mat-card class="h-100 p-4 border-0 shadow-sm hover-elevate">
-          <mat-icon class="text-primary fs-1 mb-3" style="width: auto; height: auto;">work</mat-icon>
-          <h3 class="fw-bold">Insertion Pro</h3>
-          <p class="text-muted">Un accompagnement personnalisé vers l'emploi.</p>
-        </mat-card>
+    </div>
+    <div class="col-md-4">
+      <div class="feature-card h-100 p-4 border-0 shadow-sm">
+        <div class="feature-icon text-success mb-3"><i class="bi bi-people"></i></div>
+        <h4 class="feature-title">Formateurs Experts</h4>
+        <p class="feature-text">Apprenez auprès de professionnels reconnus ayant une solide expérience terrain et une passion pour la transmission.</p>
       </div>
-      <div class="col-md-4">
-        <mat-card class="h-100 p-4 border-0 shadow-sm hover-elevate">
-          <mat-icon class="text-primary fs-1 mb-3" style="width: auto; height: auto;">group</mat-icon>
-          <h3 class="fw-bold">Pédagogie Active</h3>
-          <p class="text-muted">Apprenez par la pratique avec des experts du métier.</p>
-        </mat-card>
+    </div>
+    <div class="col-md-4">
+      <div class="feature-card h-100 p-4 border-0 shadow-sm">
+        <div class="feature-icon text-warning mb-3"><i class="bi bi-laptop"></i></div>
+        <h4 class="feature-title">Pédagogie Moderne</h4>
+        <p class="feature-text">Une approche interactive mêlant pratique intensive, ateliers en situation réelle, projets tutorés et stages en entreprise.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-5 text-primary">Formations à la Une</h2>
-    <div class="row g-4">
-      <div class="col-md-4" *ngFor="let formation of topFormations">
-        <mat-card class="h-100 shadow-sm hover-elevate d-flex flex-column">
-          <img mat-card-image [src]="formation.image" [alt]="formation.title" style="height: 200px; object-fit: cover;">
-          <mat-card-header class="mt-3">
-            <mat-card-title class="fw-bold">{{ formation.title }}</mat-card-title>
-          </mat-card-header>
-          <mat-card-content class="mt-2 flex-grow-1">
-            <p>{{ formation.subtitle }}</p>
-          </mat-card-content>
-          <mat-card-actions align="end" class="pb-3 pe-3">
-            <a [routerLink]="['/formations', formation.id]" mat-button color="primary">EN SAVOIR PLUS</a>
-          </mat-card-actions>
-        </mat-card>
+<!-- ═══════════════════  FORMATIONS SECTION  ═══════════════════ -->
+<section id="formations" class="container my-5">
+  <div class="text-center mb-4">
+    <h2 class="section-title">Nos Formations Phares</h2>
+    <p class="section-subtitle">Découvrez notre sélection de programmes certifiants conçus pour répondre aux exigences réelles du marché.</p>
+  </div>
+
+  <div class="card-container">
+    <div class="formation-card" *ngFor="let formation of topFormations">
+      <div class="formation-card-img" [style.backgroundImage]="'url(' + formation.image + ')'"></div>
+      <div class="formation-card-body">
+        <div class="d-flex align-items-center justify-content-between mb-2" *ngIf="formation.duration">
+          <span class="badge-modern"><i class="bi bi-clock"></i> {{ formation.duration }}</span>
+          <span class="badge-modern" *ngIf="formation.mode"><i class="bi bi-geo-alt"></i> {{ formation.mode }}</span>
+        </div>
+        <h3 class="formation-card-title">{{ formation.title }}</h3>
+        <p class="formation-card-text">{{ formation.subtitle }}</p>
+        <div class="formation-card-actions">
+          <a [routerLink]="['/formations', formation.id]" class="card-link">
+            En savoir plus <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="text-center mt-5">
-      <a routerLink="/poles" mat-stroked-button color="primary" class="px-4">VOIR TOUTES LES FORMATIONS</a>
+  </div>
+
+  <div class="text-center mt-4">
+    <a routerLink="/poles" class="btn btn-outline-pill px-4">
+      Voir toutes les formations <i class="bi bi-arrow-right ms-1"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════  INTRODUCTION SECTION  ═══════════════════ -->
+<section class="container my-5">
+  <div class="intro-box p-5 shadow-sm">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h2 class="h3 fw-medium text-dark mb-3">Votre Partenaire en Formation Professionnelle</h2>
+        <p class="text-secondary fs-5 mb-0 lh-base">
+          LTS Academy accompagne les étudiants, diplômés et professionnels dans la montée en compétences à travers des filières d'avenir :
+          <strong class="text-primary">Marketing Digital, Développement Web, QHSE, Ressources Humaines, Logistique et Big Data</strong>.
+        </p>
+      </div>
+      <div class="col-lg-4 text-lg-end text-start mt-4 mt-lg-0">
+        <a routerLink="/" fragment="contact" class="btn btn-primary-custom">
+          Prendre contact <i class="bi bi-chat-dots"></i>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="py-5 bg-dark text-white text-center">
-  <div class="container">
-    <h2 class="mb-4">Prêt à nous rejoindre ?</h2>
-    <p class="lead mb-4">Contactez-nous dès aujourd'hui pour plus d'informations.</p>
-    <a href="tel:+212660356877" mat-raised-button color="warn" class="px-4 py-2 fs-5">Appeler maintenant</a>
+<!-- ═══════════════════  AI LANGUAGE DETECTOR SECTION  ═══════════════════ -->
+<app-language-detector></app-language-detector>
+
+<!-- ═══════════════════  ABOUT / BANNER SECTION  ═══════════════════ -->
+<section class="container my-5">
+  <div class="about-card p-5 shadow-sm">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="section-title text-start mb-3">Apprendre facilement avec LTS</h2>
+        <p class="text-secondary fs-5 mb-4">
+          Élargissez vos horizons professionnels grâce à des cursus conçus sur mesure.
+          Bénéficiez d'une pédagogie axée sur l'employabilité et le coaching continu.
+        </p>
+        <ul class="list-unstyled">
+          <li class="mb-3 fs-5 d-flex align-items-center text-dark">
+            <i class="bi bi-check-circle-fill text-success me-3 fs-4"></i>
+            Formateurs certifiés et professionnels en activité
+          </li>
+          <li class="mb-3 fs-5 d-flex align-items-center text-dark">
+            <i class="bi bi-check-circle-fill text-success me-3 fs-4"></i>
+            Programmes certifiants et diplômants reconnus
+          </li>
+          <li class="mb-3 fs-5 d-flex align-items-center text-dark">
+            <i class="bi bi-check-circle-fill text-success me-3 fs-4"></i>
+            Flexibilité d'apprentissage (Présentiel, Hybride, E-learning)
+          </li>
+          <li class="mb-3 fs-5 d-flex align-items-center text-dark">
+            <i class="bi bi-check-circle-fill text-success me-3 fs-4"></i>
+            Accompagnement personnalisé et aide au placement en entreprise
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="assets/banner_img.png" alt="LTS Academy Learning" class="img-fluid rounded-4 shadow-md about-banner-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════  CONTACT SECTION (GOOGLE FORM STYLE)  ═══════════════════ -->
+<section id="contact" class="container my-5">
+  <span id="apply" style="display:block; position:relative; top:-74px; visibility:hidden;"></span>
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="contact-card p-5 shadow-sm">
+        <h2 class="section-title mb-2">Contactez-nous</h2>
+        <p class="section-subtitle mb-4">Une question sur nos programmes ou une demande de devis ? Notre équipe vous répond sous 24h.</p>
+
+        <form>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label text-secondary small fw-medium">Nom complet</label>
+              <input type="text" class="form-control form-control-lg" placeholder="Votre nom">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-secondary small fw-medium">Email</label>
+              <input type="email" class="form-control form-control-lg" placeholder="exemple@email.com">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-secondary small fw-medium">Téléphone</label>
+              <input type="tel" class="form-control form-control-lg" placeholder="06XXXXXXXX">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-secondary small fw-medium">Formation souhaitée</label>
+              <select class="form-control form-control-lg">
+                <option value="">Sélectionnez une formation</option>
+                <option *ngFor="let f of topFormations" [value]="f.id">{{ f.title }}</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label text-secondary small fw-medium">Votre message</label>
+              <textarea class="form-control form-control-lg" rows="4" placeholder="Détaillez votre projet ou votre demande..."></textarea>
+            </div>
+            <div class="col-12 text-center mt-4">
+              <button type="button" class="btn btn-primary-custom px-5 py-3 fs-6">
+                Envoyer ma demande <i class="bi bi-send ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
