@@ -17,21 +17,33 @@ template = """<!doctype html>
   <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top" style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="../index.html">
         <img src="../ltsAcademy.png" alt="LTS Academy" width="40" height="40" class="me-2">
-        <span>LTS ACADEMY</span>
+        <span style="font-weight: 500; color: #1a73e8;">LTS ACADEMY</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav gap-2">
           <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
           <li class="nav-item"><a class="nav-link" href="../impact.html">Étude d’Impact</a></li>
+          <li class="nav-item"><a class="nav-link" href="../impact-environnement.html">Impact Environnement</a></li>
           <li class="nav-item"><a class="nav-link active" href="../poles.html">Nos Pôles</a></li>
-          <li class="nav-item"><a class="nav-link btn btn-primary-custom text-white ms-lg-3 px-4" href="../index.html#contact">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Formations</a>
+            <ul class="dropdown-menu border-0 shadow-lg" style="border-radius: 12px;">
+              <li><a class="dropdown-item" href="marketing.html">Marketing Digital</a></li>
+              <li><a class="dropdown-item" href="rh.html">Ressources Humaines</a></li>
+              <li><a class="dropdown-item" href="logistique.html">Logistique</a></li>
+              <li><a class="dropdown-item" href="web-development.html">Développement Web</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-primary" href="../poles.html">Voir toutes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link btn btn-primary-custom text-white ms-lg-3 px-4" href="../index.html#contact" style="background-color: #1a73e8; border-radius: 50px;">Contact</a></li>
         </ul>
       </div>
     </div>
